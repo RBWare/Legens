@@ -33,6 +33,7 @@ import me.ash.reader.ui.page.settings.color.feeds.FeedsPageStylePage
 import me.ash.reader.ui.page.settings.color.flow.FlowPageStylePage
 import me.ash.reader.ui.page.settings.color.reading.*
 import me.ash.reader.ui.page.settings.interaction.InteractionPage
+import me.ash.reader.ui.page.settings.languages.FiltersPage
 import me.ash.reader.ui.page.settings.languages.LanguagesPage
 import me.ash.reader.ui.page.settings.tips.TipsAndSupportPage
 import me.ash.reader.ui.page.startup.StartupPage
@@ -71,6 +72,7 @@ fun HomeEntry(
                     0 -> Filter.Starred
                     1 -> Filter.Unread
                     2 -> Filter.All
+                    3 -> Filter.HiddenByFilter
                     else -> Filter.All
                 }
             )
@@ -201,6 +203,11 @@ fun HomeEntry(
             // Tips & Support
             forwardAndBackwardComposable(route = RouteName.TIPS_AND_SUPPORT) {
                 TipsAndSupportPage(navController)
+            }
+
+            // Filters
+            forwardAndBackwardComposable(route = RouteName.FILTERS) {
+                FiltersPage(navController)
             }
         }
     }

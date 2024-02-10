@@ -81,5 +81,8 @@ fun Preferences.toSettings(): Settings {
 
         // Languages
         languages = LanguagesPreference.fromPreferences(this),
+
+        // Filters
+        filterDuplicates = FilterDuplicatesPreference.fromPreferences(this),
     )
 }

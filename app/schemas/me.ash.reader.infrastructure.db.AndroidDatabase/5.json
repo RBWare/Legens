@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 5,
-    "identityHash": "2b86f20200ed2c56f5ae8d0565cf0f26",
+    "identityHash": "1753d00cdaa5c668a029838bb2c3eb21",
     "entities": [
       {
         "tableName": "account",
@@ -192,7 +192,7 @@
       },
       {
         "tableName": "article",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `date` INTEGER NOT NULL, `title` TEXT NOT NULL, `author` TEXT, `rawDescription` TEXT NOT NULL, `shortDescription` TEXT NOT NULL, `fullContent` TEXT, `img` TEXT, `link` TEXT NOT NULL, `feedId` TEXT NOT NULL, `accountId` INTEGER NOT NULL, `isUnread` INTEGER NOT NULL, `isStarred` INTEGER NOT NULL, `isReadLater` INTEGER NOT NULL, `updateAt` INTEGER, PRIMARY KEY(`id`), FOREIGN KEY(`feedId`) REFERENCES `feed`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `date` INTEGER NOT NULL, `title` TEXT NOT NULL, `author` TEXT, `rawDescription` TEXT NOT NULL, `shortDescription` TEXT NOT NULL, `fullContent` TEXT, `img` TEXT, `link` TEXT NOT NULL, `feedId` TEXT NOT NULL, `accountId` INTEGER NOT NULL, `isUnread` INTEGER NOT NULL, `isStarred` INTEGER NOT NULL, `isHiddenByFilter` INTEGER NOT NULL, `isReadLater` INTEGER NOT NULL, `updateAt` INTEGER, `isHiddenByFilter` INTEGER NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`feedId`) REFERENCES `feed`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -273,6 +273,12 @@
             "notNull": true
           },
           {
+            "fieldPath": "isHiddenByFilter",
+            "columnName": "isHiddenByFilter",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
             "fieldPath": "isReadLater",
             "columnName": "isReadLater",
             "affinity": "INTEGER",
@@ -283,6 +289,12 @@
             "columnName": "updateAt",
             "affinity": "INTEGER",
             "notNull": false
+          },
+          {
+            "fieldPath": "isHiddenByFilter",
+            "columnName": "isHiddenByFilter",
+            "affinity": "INTEGER",
+            "notNull": true
           }
         ],
         "primaryKey": {
@@ -371,7 +383,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2b86f20200ed2c56f5ae8d0565cf0f26')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1753d00cdaa5c668a029838bb2c3eb21')"
     ]
   }
 }

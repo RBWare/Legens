@@ -422,4 +422,11 @@ sealed class DataStoreKeys<T> {
         override val key: Preferences.Key<Int>
             get() = intPreferencesKey("languages")
     }
+
+    // Filters
+    object FilterDuplicates : DataStoreKeys<Boolean>() {
+
+        override val key: Preferences.Key<Boolean>
+            get() = booleanPreferencesKey("filterDuplicates")
+    }
 }

@@ -48,6 +48,8 @@ data class Article(
     var isReadLater: Boolean = false,
     @ColumnInfo
     var updateAt: Date? = null,
+    @ColumnInfo
+    var isHiddenByFilter: Boolean = false,
 ) {
 
     @Ignore

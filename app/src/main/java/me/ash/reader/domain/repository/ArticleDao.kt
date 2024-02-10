@@ -33,6 +33,19 @@ interface ArticleDao {
 
     @Query(
         """
+        UPDATE article SET isHiddenByFilter = :isHiddenByFilter 
+        WHERE accountId = :accountId
+        AND id in (:ids)
+        """
+    )
+    fun markAsHiddenByFilterByIdSet(
+        accountId: Int,
+        ids: Set<String>,
+        isHiddenByFilter: Boolean,
+    ): Int
+
+    @Query(
+        """
         UPDATE article SET isUnread = :isUnread 
         WHERE accountId = :accountId
         AND id in (:ids)
@@ -487,7 +500,8 @@ interface ArticleDao {
         """
         SELECT a.id, a.date, a.title, a.author, a.rawDescription, 
         a.shortDescription, a.fullContent, a.img, a.link, a.feedId, 
-        a.accountId, a.isUnread, a.isStarred, a.isReadLater, a.updateAt 
+        a.accountId, a.isUnread, a.isStarred, a.isReadLater, a.updateAt,
+        a.isHiddenByFilter
         FROM article AS a
         LEFT JOIN feed AS b ON b.id = a.feedId
         LEFT JOIN `group` AS c ON c.id = b.groupId
@@ -507,7 +521,8 @@ interface ArticleDao {
         """
         SELECT a.id, a.date, a.title, a.author, a.rawDescription, 
         a.shortDescription, a.fullContent, a.img, a.link, a.feedId, 
-        a.accountId, a.isUnread, a.isStarred, a.isReadLater, a.updateAt 
+        a.accountId, a.isUnread, a.isStarred, a.isReadLater, a.updateAt,
+        a.isHiddenByFilter
         FROM article AS a
         LEFT JOIN feed AS b ON b.id = a.feedId
         LEFT JOIN `group` AS c ON c.id = b.groupId
@@ -529,7 +544,8 @@ interface ArticleDao {
         """
         SELECT a.id, a.date, a.title, a.author, a.rawDescription, 
         a.shortDescription, a.fullContent, a.img, a.link, a.feedId, 
-        a.accountId, a.isUnread, a.isStarred, a.isReadLater, a.updateAt 
+        a.accountId, a.isUnread, a.isStarred, a.isReadLater, a.updateAt,
+        a.isHiddenByFilter
         FROM article AS a
         LEFT JOIN feed AS b ON b.id = a.feedId
         LEFT JOIN `group` AS c ON c.id = b.groupId
@@ -596,7 +612,8 @@ interface ArticleDao {
         """
         SELECT a.id, a.date, a.title, a.author, a.rawDescription, 
         a.shortDescription, a.fullContent, a.img, a.link, a.feedId, 
-        a.accountId, a.isUnread, a.isStarred, a.isReadLater, a.updateAt 
+        a.accountId, a.isUnread, a.isStarred, a.isReadLater, a.updateAt,
+        a.isHiddenByFilter
         FROM article AS a LEFT JOIN feed AS b 
         ON a.feedId = b.id
         WHERE a.feedId = :feedId 
@@ -632,7 +649,7 @@ interface ArticleDao {
     @Transaction
     @Query(
         """
-        SELECT id, isUnread, isStarred FROM article
+        SELECT id, isUnread, isStarred, isHiddenByFilter FROM article
         WHERE accountId = :accountId
         ORDER BY date DESC
         """
@@ -642,7 +659,7 @@ interface ArticleDao {
     @Transaction
     @Query(
         """
-        SELECT id, isUnread, isStarred FROM article
+        SELECT id, isUnread, isStarred, isHiddenByFilter FROM article
         WHERE accountId = :accountId
         AND isUnread = :isUnread
         ORDER BY date DESC
@@ -653,7 +670,7 @@ interface ArticleDao {
     @Transaction
     @Query(
         """
-        SELECT id, isUnread, isStarred FROM article
+        SELECT id, isUnread, isStarred, isHiddenByFilter FROM article
         WHERE accountId = :accountId
         AND date < :before
         ORDER BY date DESC
@@ -664,7 +681,7 @@ interface ArticleDao {
     @Transaction
     @Query(
         """
-        SELECT id, isUnread, isStarred FROM article
+        SELECT id, isUnread, isStarred, isHiddenByFilter FROM article
         WHERE accountId = :accountId
         AND isUnread = :isUnread
         AND date < :before
@@ -676,7 +693,7 @@ interface ArticleDao {
     @Transaction
     @Query(
         """
-        SELECT id, isUnread, isStarred FROM article
+        SELECT id, isUnread, isStarred, isHiddenByFilter FROM article
         WHERE accountId = :accountId
         AND feedId = :feedId
         AND isUnread = :isUnread
@@ -688,7 +705,7 @@ interface ArticleDao {
     @Transaction
     @Query(
         """
-        SELECT id, isUnread, isStarred FROM article
+        SELECT id, isUnread, isStarred, isHiddenByFilter FROM article
         WHERE accountId = :accountId
         AND feedId = :feedId
         AND isUnread = :isUnread
@@ -701,7 +718,7 @@ interface ArticleDao {
     @Transaction
     @Query(
         """
-        SELECT a.id, a.isUnread, a.isStarred 
+        SELECT a.id, a.isUnread, a.isStarred, a.isHiddenByFilter 
         FROM article AS a
         LEFT JOIN feed AS b ON b.id = a.feedId
         LEFT JOIN `group` AS c ON c.id = b.groupId
@@ -716,7 +733,7 @@ interface ArticleDao {
     @Transaction
     @Query(
         """
-        SELECT a.id, a.isUnread, a.isStarred 
+        SELECT a.id, a.isUnread, a.isStarred, a.isHiddenByFilter 
         FROM article AS a
         LEFT JOIN feed AS b ON b.id = a.feedId
         LEFT JOIN `group` AS c ON c.id = b.groupId

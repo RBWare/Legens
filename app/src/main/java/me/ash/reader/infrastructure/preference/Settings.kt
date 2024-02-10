@@ -80,6 +80,9 @@ data class Settings(
 
     // Languages
     val languages: LanguagesPreference = LanguagesPreference.default,
+
+    // Filters
+    val filterDuplicates: FilterDuplicatesPreference = FilterDuplicatesPreference.default,
 )
 
 // Version
@@ -186,6 +189,10 @@ val LocalOpenLinkSpecificBrowser =
 val LocalLanguages =
     compositionLocalOf<LanguagesPreference> { LanguagesPreference.default }
 
+// Filters
+val LocalFilterDuplicates =
+    compositionLocalOf<FilterDuplicatesPreference> { FilterDuplicatesPreference.default }
+
 @Composable
 fun SettingsProvider(
     content: @Composable () -> Unit,
@@ -268,6 +275,9 @@ fun SettingsProvider(
 
         // Languages
         LocalLanguages provides settings.languages,
+
+        // Filters
+        LocalFilterDuplicates provides settings.filterDuplicates,
     ) {
         content()
     }

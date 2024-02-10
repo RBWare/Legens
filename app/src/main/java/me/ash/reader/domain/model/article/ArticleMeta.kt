@@ -14,4 +14,6 @@ data class ArticleMeta(
     var isUnread: Boolean = true,
     @ColumnInfo
     var isStarred: Boolean = false,
+    @ColumnInfo
+    var isHiddenByFilter: Boolean = false,
 )

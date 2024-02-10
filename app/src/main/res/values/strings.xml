@@ -16,6 +16,11 @@
         <item quantity="one">%1$d Starred Item</item>
         <item quantity="other">%1$d Starred Items</item>
     </plurals>
+    <string name="filtered">Filtered</string>
+    <plurals name="filtered_desc">
+        <item quantity="one">%1$d Filtered Item</item>
+        <item quantity="other">%1$d Filtered Items</item>
+    </plurals>
     <string name="feeds">Feeds</string>
     <string name="syncing">Syncing…</string>
     <string name="loading">Loading…</string>
@@ -120,6 +125,12 @@
     <string name="chinese_traditional" translatable="false">繁體中文</string>
     <string name="tips_and_support">Tips &amp; support</string>
     <string name="tips_and_support_desc">About, open source licenses</string>
+    <string name="filters">Filters</string>
+    <string name="filters_desc">Keywords, duplicate articles</string>
+    <string name="duplicates">Duplicates</string>
+    <string name="filter_duplicate_articles">Filter duplicate articles</string>
+    <string name="add_filter">Add Filter</string>
+    <string name="add_filter_desc">Keywords to filter articles</string>
     <string name="welcome">Welcome</string>
     <string name="tos_tips">Please read and agree to Read You\'s Terms of Service and Privacy Policy to continue.</string>
     <string name="browse_tos_tips">Browse the &lt;i&gt;&lt;u&gt;Terms of Service and Privacy Policy&lt;/u&gt;&lt;/i&gt;

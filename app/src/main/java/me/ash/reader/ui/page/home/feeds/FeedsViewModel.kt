@@ -42,6 +42,7 @@ class FeedsViewModel @Inject constructor(
     fun pullFeeds(filterState: FilterState) {
         val isStarred = filterState.filter.isStarred()
         val isUnread = filterState.filter.isUnread()
+        val isHiddenByFilter = filterState.filter.isHiddenByFilter()
         _feedsUiState.update {
             val important = rssService.get().pullImportant(isStarred, isUnread)
             it.copy(

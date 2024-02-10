@@ -103,6 +103,17 @@ fun SettingsPage(
                 }
                 item {
                     SelectableSettingGroupItem(
+                        title = stringResource(R.string.filters),
+                        desc = stringResource(R.string.filters_desc),
+                        icon = Icons.Outlined.Filter,
+                    ) {
+                        navController.navigate(RouteName.FILTERS) {
+                            launchSingleTop = true
+                        }
+                    }
+                }
+                item {
+                    SelectableSettingGroupItem(
                         title = stringResource(R.string.color_and_style),
                         desc = stringResource(R.string.color_and_style_desc),
                         icon = Icons.Outlined.Palette,

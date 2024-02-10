@@ -3,6 +3,7 @@ package me.ash.reader.domain.model.general
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.FiberManualRecord
 import androidx.compose.material.icons.rounded.FiberManualRecord
+import androidx.compose.material.icons.rounded.Filter
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material.icons.rounded.StarOutline
 import androidx.compose.material.icons.rounded.Subject
@@ -34,11 +35,14 @@ class Filter private constructor(
     fun isUnread(): Boolean = this == Unread
     fun isAll(): Boolean = this == All
 
+    fun isHiddenByFilter(): Boolean = this == HiddenByFilter
+
     @Stable
     @Composable
     fun toName(): String = when (this) {
         Unread -> stringResource(R.string.unread)
         Starred -> stringResource(R.string.starred)
+        HiddenByFilter -> stringResource(R.string.filtered)
         else -> stringResource(R.string.all)
     }
 
@@ -48,6 +52,7 @@ class Filter private constructor(
     fun toDesc(important: Int): String = when (this) {
         Starred -> pluralStringResource(R.plurals.starred_desc, important, important)
         Unread -> pluralStringResource(R.plurals.unread_desc, important, important)
+        HiddenByFilter -> pluralStringResource(R.plurals.filtered_desc, important)
         else -> pluralStringResource(R.plurals.all_desc, important, important)
     }
 
@@ -68,6 +73,11 @@ class Filter private constructor(
             iconOutline = Icons.Rounded.Subject,
             iconFilled = Icons.Rounded.Subject,
         )
-        val values = listOf(Starred, Unread, All)
+        val HiddenByFilter = Filter(
+            index = 3,
+            iconOutline = Icons.Rounded.Filter,
+            iconFilled = Icons.Rounded.Filter,
+        )
+        val values = listOf(Starred, Unread, All, HiddenByFilter)
     }
 }

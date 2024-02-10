@@ -105,7 +105,7 @@ fun SettingsPage(
                     SelectableSettingGroupItem(
                         title = stringResource(R.string.filters),
                         desc = stringResource(R.string.filters_desc),
-                        icon = Icons.Outlined.Filter,
+                        icon = Icons.Outlined.PostAdd,
                     ) {
                         navController.navigate(RouteName.FILTERS) {
                             launchSingleTop = true

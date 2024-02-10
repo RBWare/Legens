@@ -131,6 +131,7 @@
     <string name="filter_duplicate_articles">Filter duplicate articles</string>
     <string name="add_filter">Add Filter</string>
     <string name="add_filter_desc">Keywords to filter articles</string>
+    <string name="keyword">Keyword</string>
     <string name="welcome">Welcome</string>
     <string name="tos_tips">Please read and agree to Read You\'s Terms of Service and Privacy Policy to continue.</string>
     <string name="browse_tos_tips">Browse the &lt;i&gt;&lt;u&gt;Terms of Service and Privacy Policy&lt;/u&gt;&lt;/i&gt;

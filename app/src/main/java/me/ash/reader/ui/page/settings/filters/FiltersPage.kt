@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import me.ash.reader.R
 import me.ash.reader.infrastructure.preference.LanguagesPreference
@@ -31,16 +32,24 @@ import me.ash.reader.ui.component.base.DisplayText
 import me.ash.reader.ui.component.base.FeedbackIconButton
 import me.ash.reader.ui.component.base.RYScaffold
 import me.ash.reader.ui.component.base.RYSwitch
-import me.ash.reader.ui.ext.openURL
-import me.ash.reader.ui.page.common.RouteName
 import me.ash.reader.ui.page.settings.SettingItem
+import me.ash.reader.ui.page.settings.accounts.addition.AdditionViewModel
+import me.ash.reader.ui.page.settings.filters.AddFilterDialog
+import me.ash.reader.ui.page.settings.filters.AddFilterViewModel
 import me.ash.reader.ui.theme.palette.onLight
-import java.util.Locale
+
+/*
+TODO
+- "Check only title(s)"
+- Compare article content
+- Create tiered/sortable list for "preferred" sources
+*/
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FiltersPage(
     navController: NavHostController,
+    addFilterViewModel: AddFilterViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
     val filterDuplicates = LocalFilterDuplicates.current
@@ -68,15 +77,6 @@ fun FiltersPage(
                         desc = stringResource(R.string.filter_duplicate_articles),
                         separatedActions = true,
                         onClick = {
-                                  /*
-                                  TODO
-                                      - "Check only title(s)"
-                                      - Compare article content
-                                      - Create tiered/sortable list for "preferred" sources
-                                   */
-//                            navController.navigate(RouteName.DARK_THEME) {
-//                                launchSingleTop = true
-//                            }
                             (!filterDuplicates).put(context, scope)
                         },
                     ) {
@@ -90,24 +90,10 @@ fun FiltersPage(
                         desc = stringResource(R.string.add_filter_desc),
                         icon = Icons.Outlined.PostAdd,
                         onClick = {
-                            // TODO - Launch Dialog for adding filter
+                            addFilterViewModel.showAddFilterDialog()
                         },
                     ) {}
                 }
-//                item {
-//                    LanguagesPreference.values.map {
-//                        SettingItem(
-//                            title = it.toDesc(),
-//                            onClick = {
-//                                it.put(context, scope)
-//                            },
-//                        ) {
-//                            RadioButton(selected = it == languages, onClick = {
-//                                it.put(context, scope)
-//                            })
-//                        }
-//                    }
-//                }
                 item {
                     Spacer(modifier = Modifier.height(24.dp))
                     Spacer(modifier = Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars))
@@ -115,4 +101,6 @@ fun FiltersPage(
             }
         }
     )
+
+    AddFilterDialog(navController)
 }

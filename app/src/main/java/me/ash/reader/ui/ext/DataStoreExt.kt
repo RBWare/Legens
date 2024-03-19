@@ -295,6 +295,12 @@ sealed class DataStoreKeys<T> {
             get() = intPreferencesKey("readingTextFontSize")
     }
 
+    object ReadingLineHeight : DataStoreKeys<Float>() {
+
+        override val key: Preferences.Key<Float>
+            get() = floatPreferencesKey("readingTextLineHeight")
+    }
+
     object ReadingLetterSpacing : DataStoreKeys<Double>() {
 
         override val key: Preferences.Key<Double>
@@ -404,6 +410,23 @@ sealed class DataStoreKeys<T> {
             get() = intPreferencesKey("initialFilter")
     }
 
+    data object SwipeStartAction : DataStoreKeys<Int>() {
+
+        override val key: Preferences.Key<Int>
+            get() = intPreferencesKey("swipeStartAction")
+    }
+
+    data object SwipeEndAction : DataStoreKeys<Int>() {
+
+        override val key: Preferences.Key<Int>
+            get() = intPreferencesKey("swipeEndAction")
+    }
+
+    data object PullToSwitchArticle : DataStoreKeys<Boolean>() {
+        override val key: Preferences.Key<Boolean>
+            get() = booleanPreferencesKey("pullToSwitchArticle")
+    }
+
     object OpenLink : DataStoreKeys<Int>() {
 
         override val key: Preferences.Key<Int>
@@ -413,7 +436,7 @@ sealed class DataStoreKeys<T> {
     object OpenLinkAppSpecificBrowser : DataStoreKeys<String>() {
 
         override val key: Preferences.Key<String>
-                get() = stringPreferencesKey("openLppSpecificBrowser")
+            get() = stringPreferencesKey("openLppSpecificBrowser")
     }
 
     // Languages

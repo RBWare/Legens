@@ -35,6 +35,7 @@ import me.ash.reader.infrastructure.rss.provider.greader.GoogleReaderDTO
 import me.ash.reader.ui.ext.currentAccountId
 import me.ash.reader.ui.ext.decodeHTML
 import me.ash.reader.ui.ext.dollarLast
+import me.ash.reader.ui.ext.isFuture
 import me.ash.reader.ui.ext.showToast
 import me.ash.reader.ui.ext.spacerDollar
 import java.util.Calendar
@@ -107,15 +108,17 @@ class GoogleReaderRssService @Inject constructor(
             destCategoryId = groupId.dollarLast(),
             destFeedName = searchedFeed.title!!
         )
-        feedDao.insert(Feed(
-            id = accountId.spacerDollar(feedId),
-            name = searchedFeed.title!!,
-            url = feedLink,
-            groupId = groupId,
-            accountId = accountId,
-            isNotification = isNotification,
-            isFullContent = isFullContent,
-        ))
+        feedDao.insert(
+            Feed(
+                id = accountId.spacerDollar(feedId),
+                name = searchedFeed.title!!,
+                url = feedLink,
+                groupId = groupId,
+                accountId = accountId,
+                isNotification = isNotification,
+                isFullContent = isFullContent,
+            )
+        )
         // TODO: When users need to subscribe to multiple feeds continuously, this makes them uncomfortable.
         //  It is necessary to make syncWork support synchronizing individual specified feeds.
         // super.doSyncOneTime()
@@ -232,11 +235,13 @@ class GoogleReaderRssService @Inject constructor(
 
                         // Handle folders
                         groupDao.insertOrUpdate(
-                            listOf(Group(
-                                id = groupId,
-                                name = category.label!!,
-                                accountId = accountId,
-                            ))
+                            listOf(
+                                Group(
+                                    id = groupId,
+                                    name = category.label!!,
+                                    accountId = accountId,
+                                )
+                            )
                         )
                         groupIds.add(groupId)
 
@@ -405,7 +410,10 @@ class GoogleReaderRssService @Inject constructor(
                     val articleId = it.id!!.ofItemStreamIdToId()
                     Article(
                         id = accountId.spacerDollar(articleId),
-                        date = it.published?.run { Date(this * 1000) } ?: preDate,
+                        date = it.published
+                            ?.run { Date(this * 1000) }
+                            ?.takeIf { !it.isFuture(preDate) }
+                            ?: preDate,
                         title = it.title.decodeHTML() ?: context.getString(R.string.empty),
                         author = it.author,
                         rawDescription = it.summary?.content ?: "",
@@ -414,8 +422,10 @@ class GoogleReaderRssService @Inject constructor(
                         fullContent = it.summary?.content ?: "",
                         img = rssHelper.findImg(it.summary?.content ?: ""),
                         link = findArticleURL(it),
-                        feedId = accountId.spacerDollar(it.origin?.streamId?.ofFeedStreamIdToId()
-                            ?: feedIds.first()),
+                        feedId = accountId.spacerDollar(
+                            it.origin?.streamId?.ofFeedStreamIdToId()
+                                ?: feedIds.first()
+                        ),
                         accountId = accountId,
                         isUnread = unreadIds.contains(articleId),
                         isStarred = starredIds.contains(articleId),
@@ -444,10 +454,12 @@ class GoogleReaderRssService @Inject constructor(
                 if (before == null) {
                     articleDao.queryMetadataByGroupIdWhenIsUnread(accountId, groupId, !isUnread)
                 } else {
-                    articleDao.queryMetadataByGroupIdWhenIsUnread(accountId,
+                    articleDao.queryMetadataByGroupIdWhenIsUnread(
+                        accountId,
                         groupId,
                         !isUnread,
-                        before)
+                        before
+                    )
                 }.map { it.id.dollarLast() }
             }
 
@@ -472,10 +484,23 @@ class GoogleReaderRssService @Inject constructor(
             }
         }
         super.markAsRead(groupId, feedId, articleId, before, isUnread)
-        markList.takeIf { it.isNotEmpty() }?.chunked(500)?.forEach {
-            Log.d("RLog", "sync markAsRead: ${it.size} num")
+        markList.takeIf { it.isNotEmpty() }?.chunked(500)?.forEachIndexed { index, it ->
+            Log.d("RLog", "sync markAsRead:  ${(index * 500) + it.size}/${markList.size} num")
             googleReaderAPI.editTag(
                 itemIds = it,
+                mark = if (!isUnread) GoogleReaderAPI.Stream.READ.tag else null,
+                unmark = if (isUnread) GoogleReaderAPI.Stream.READ.tag else null,
+            )
+        }
+    }
+
+    override suspend fun batchMarkAsRead(articleIds: Set<String>, isUnread: Boolean) {
+        super.batchMarkAsRead(articleIds, isUnread)
+        val googleReaderAPI = getGoogleReaderAPI()
+        articleIds.takeIf { it.isNotEmpty() }?.chunked(500)?.forEachIndexed { index, it ->
+            Log.d("RLog", "sync markAsRead:  ${(index * 500) + it.size}/${articleIds.size} num")
+            googleReaderAPI.editTag(
+                itemIds = it.map { it.dollarLast() },
                 mark = if (!isUnread) GoogleReaderAPI.Stream.READ.tag else null,
                 unmark = if (isUnread) GoogleReaderAPI.Stream.READ.tag else null,
             )

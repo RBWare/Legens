@@ -4,7 +4,6 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.lazy.LazyListScope
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
@@ -12,37 +11,39 @@ import me.ash.reader.domain.model.article.ArticleFlowItem
 import me.ash.reader.domain.model.article.ArticleWithFeed
 
 @Suppress("FunctionName")
-@OptIn(ExperimentalFoundationApi::class, ExperimentalMaterialApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 fun LazyListScope.ArticleList(
     pagingItems: LazyPagingItems<ArticleFlowItem>,
     isFilterUnread: Boolean,
     isShowFeedIcon: Boolean,
     isShowStickyHeader: Boolean,
     articleListTonalElevation: Int,
+    isSwipeEnabled: () -> Boolean = { false },
+    isMenuEnabled: Boolean = true,
     onClick: (ArticleWithFeed) -> Unit = {},
-    onSwipeOut: (ArticleWithFeed) -> Unit = {}
+    onToggleStarred: (ArticleWithFeed, Long) -> Unit = { _, _ -> },
+    onToggleRead: (ArticleWithFeed, Long) -> Unit = { _, _ -> },
+    onMarkAboveAsRead: ((ArticleWithFeed) -> Unit)? = null,
+    onMarkBelowAsRead: ((ArticleWithFeed) -> Unit)? = null,
+    onShare: ((ArticleWithFeed) -> Unit)? = null,
 ) {
     for (index in 0 until pagingItems.itemCount) {
         when (val item = pagingItems.peek(index)) {
             is ArticleFlowItem.Article -> {
                 item(key = item.articleWithFeed.article.id) {
-                    if (item.articleWithFeed.article.isUnread) {
-                        SwipeableArticleItem(
-                            articleWithFeed = item.articleWithFeed,
-                            isFilterUnread = isFilterUnread,
-                            articleListTonalElevation = articleListTonalElevation,
-                            onClick = { onClick(it) },
-                            onSwipeOut = { onSwipeOut(it) }
-                        )
-                    } else {
-                        // Currently we don't have swipe left to mark as unread,
-                        // so [SwipeableArticleItem] is not necessary for read articles.
-                        ArticleItem(
-                            articleWithFeed = (pagingItems[index] as ArticleFlowItem.Article).articleWithFeed,
-                        ) {
-                            onClick(it)
-                        }
-                    }
+                    SwipeableArticleItem(
+                        articleWithFeed = item.articleWithFeed,
+                        isFilterUnread = isFilterUnread,
+                        articleListTonalElevation = articleListTonalElevation,
+                        onClick = onClick,
+                        isSwipeEnabled = isSwipeEnabled,
+                        isMenuEnabled = isMenuEnabled,
+                        onToggleStarred = onToggleStarred,
+                        onToggleRead = onToggleRead,
+                        onMarkAboveAsRead = if (index == 1) null else onMarkAboveAsRead, // index == 0 -> ArticleFlowItem.Date
+                        onMarkBelowAsRead = if (index == pagingItems.itemCount - 1) null else onMarkBelowAsRead,
+                        onShare = onShare
+                    )
                 }
             }
 

@@ -25,6 +25,7 @@ import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -61,6 +62,7 @@ import me.ash.reader.ui.component.base.RYScaffold
 import me.ash.reader.ui.component.base.Subtitle
 import me.ash.reader.ui.ext.alphaLN
 import me.ash.reader.ui.ext.collectAsStateValue
+import me.ash.reader.ui.ext.currentAccountId
 import me.ash.reader.ui.ext.findActivity
 import me.ash.reader.ui.ext.getCurrentVersion
 import me.ash.reader.ui.page.common.RouteName
@@ -115,8 +117,14 @@ fun FeedsPage(
 
     val owner = LocalLifecycleOwner.current
     var isSyncing by remember { mutableStateOf(false) }
-    homeViewModel.syncWorkLiveData.observe(owner) {
-        it?.let { isSyncing = it.any { it.state == WorkInfo.State.RUNNING } }
+
+    DisposableEffect(owner) {
+        homeViewModel.syncWorkLiveData.observe(owner) { workInfoList ->
+            workInfoList.let {
+                isSyncing = it.any { workInfo -> workInfo.state == WorkInfo.State.RUNNING }
+            }
+        }
+        onDispose { homeViewModel.syncWorkLiveData.removeObservers(owner) }
     }
 
     val infiniteTransition = rememberInfiniteTransition()
@@ -315,7 +323,7 @@ fun FeedsPage(
         }
     )
 
-    SubscribeDialog()
+    SubscribeDialog(subscribeViewModel = subscribeViewModel)
     GroupOptionDrawer()
     FeedOptionDrawer()
 
@@ -331,6 +339,14 @@ fun FeedsPage(
                     restoreState = true
                 }
             }
+        },
+        onClickSettings = {
+            accountTabVisible = false
+            navController.navigate("${RouteName.ACCOUNT_DETAILS}/${context.currentAccountId}")
+        },
+        onClickManage = {
+            accountTabVisible = false
+            navController.navigate(RouteName.ACCOUNTS)
         },
         onDismissRequest = {
             accountTabVisible = false

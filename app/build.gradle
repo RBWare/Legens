@@ -4,6 +4,7 @@ plugins {
     id "kotlin-kapt"
     id "dagger.hilt.android.plugin"
     id "com.google.dagger.hilt.android"
+    id 'com.mikepenz.aboutlibraries.plugin'
 }
 
 def gitCommitHash = "git rev-parse --verify --short HEAD".execute().text.trim()
@@ -21,8 +22,8 @@ android {
         applicationId "me.ash.reader"
         minSdk 26
         targetSdk 33
-        versionCode 23
-        versionName "0.9.12"
+        versionCode 25
+        versionName "0.10.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -41,15 +42,15 @@ android {
 
     flavorDimensions "channel"
     productFlavors {
+        github {
+            dimension "channel"
+        }
         fdroid {
             dimension "channel"
         }
         googlePlay {
             dimension "channel"
             applicationIdSuffix ".google.play"
-        }
-        github {
-            dimension "channel"
         }
     }
     signingConfigs {
@@ -80,11 +81,11 @@ android {
         freeCompilerArgs = freeCompilerArgs + "-opt-in=kotlin.RequiresOptIn"
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_11
     }
     buildFeatures {
         compose true
@@ -107,6 +108,11 @@ android {
 }
 
 dependencies {
+    // https://github.com/mikepenz/AboutLibraries/releases
+    implementation "com.mikepenz:aboutlibraries-core:${aboutLibsRelease}"
+    implementation "com.mikepenz:aboutlibraries-compose-m3:${aboutLibsRelease}"
+
+    // https://github.com/ireward/compose-html/tags
     implementation "com.github.ireward:compose-html:1.0.2"
 
     // http://bigbadaboom.github.io/androidsvg/release_notes.html
@@ -160,7 +166,7 @@ dependencies {
     implementation "androidx.paging:paging-compose:$paging"
 
     // https://developer.android.com/jetpack/androidx/releases/paging
-    implementation "androidx.browser:browser:1.5.0"
+    implementation "androidx.browser:browser:1.8.0"
 
     // https://developer.android.com/jetpack/androidx/releases/navigation
     implementation "androidx.navigation:navigation-compose:$navigation"
@@ -170,13 +176,11 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle"
 
     // https://developer.android.com/jetpack/androidx/releases/compose-material3
-    implementation "androidx.compose.material3:material3:$material3"
+    implementation "androidx.compose.material3:material3"
 
     // https://github.com/google/accompanist/releases
-    implementation "com.google.accompanist:accompanist-systemuicontroller:$accompanist"
     implementation "com.google.accompanist:accompanist-pager:$accompanist"
     implementation "com.google.accompanist:accompanist-flowlayout:$accompanist"
-    implementation "com.google.accompanist:accompanist-navigation-animation:$accompanist"
     implementation "com.google.accompanist:accompanist-swiperefresh:$accompanist"
 
     implementation platform("androidx.compose:compose-bom:$composeBom")
@@ -204,11 +208,15 @@ dependencies {
     implementation "androidx.hilt:hilt-navigation-compose:1.1.0"
 
     // android
-    implementation "androidx.core:core-ktx:1.12.0"
-    implementation "androidx.activity:activity-compose:1.8.2"
-    implementation 'androidx.appcompat:appcompat:1.7.0-alpha03'
+    implementation "androidx.core:core-ktx:1.13.1"
+    implementation "androidx.activity:activity-compose:1.9.0"
+    implementation 'androidx.appcompat:appcompat:1.7.0'
     testImplementation "junit:junit:4.13.2"
-    androidTestImplementation "androidx.test.ext:junit:1.1.3"
-    androidTestImplementation "androidx.test.espresso:espresso-core:3.4.0"
+    androidTestImplementation "androidx.test.ext:junit:1.1.5"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
 
+    // mockito
+    testImplementation "org.mockito:mockito-core:5.11.0"
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.11.0'
+    testImplementation "org.mockito.kotlin:mockito-kotlin:5.2.1"
 }

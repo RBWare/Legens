@@ -187,8 +187,8 @@
     <string name="images">Obrázky</string>
     <string name="rounded_corners">Zaoblené rohy</string>
     <string name="videos">Videa</string>
-    <string name="align_left">Zarovnat vlevo</string>
-    <string name="align_right">Zarovnat vpravo</string>
+    <string name="align_start">Zarovnat vlevo</string>
+    <string name="align_end">Zarovnat vpravo</string>
     <string name="center_text">Vystředit text</string>
     <string name="justify">Zarovnat</string>
     <string name="external_fonts">Externí písma</string>
@@ -286,4 +286,26 @@
     <string name="none">Nic</string>
     <string name="toggle_read">Přepnout stav přečtení</string>
     <string name="toggle_starred">Přepnout stav oblíbení</string>
+    <string name="export">Export</string>
+    <string name="pull_to_switch_article">Tažením přepnout článek</string>
+    <string name="save">Uložit</string>
+    <string name="image_saved">Obrázek uloźen</string>
+    <string name="permission_denied">Povolení zamítnuto</string>
+    <string name="line_height_multiple">Násobek výšky řádku</string>
+    <string name="mark_above_as_read">Označit vše výše jako přečtené</string>
+    <string name="mark_below_as_read">Označit vše níže jako přečtené</string>
+    <string name="title_and_link">Název a odkaz</string>
+    <string name="keep_archived_tips">Archivované položky jsou články označené jako přečtené, bez hvězdičky a bez označení. Nastavení „Ponechat archivované články“ bude platit pouze na tomto zařízení. Starší archivované články budou z tohoto zařízení odstraněny. Jejich odstranění nelze vrátit zpět.</string>
+    <string name="shared_content">Sdílený obsah</string>
+    <string name="only_link">Pouze odkaz</string>
+    <string name="app_preferences">Předvolby aplikace</string>
+    <string name="import_from_protobuf_file">Importovat ze souboru protobuf</string>
+    <string name="troubleshooting">Řešení chyb</string>
+    <string name="troubleshooting_desc">Hlášení chyb, ladicí nástroje</string>
+    <string name="bug_report">Nahlásit chybu</string>
+    <string name="export_as_protobuf_file">Exportovat do souboru protobuf</string>
+    <string name="invalid_protobuf_file_warning">Tento soubor nejspíše není platným souborem protobuf. Jeho importováním můžete potenciálně poškodit aplikaci a ztratit aktuální předvolby. Opravdu chcete pokračovat?</string>
+    <string name="import_from_json">Importovat ze souboru JSON</string>
+    <string name="export_as_json">Exportovat jako JSON</string>
+    <string name="invalid_json_file_warning">Tento soubor nejspíš není platný soubor JSON. Jeho importováním můžete poškodit aplikaci, což může mít za následek ztrátu aktuálních nastavení. Opravdu chcete pokračovat?</string>
 </resources>

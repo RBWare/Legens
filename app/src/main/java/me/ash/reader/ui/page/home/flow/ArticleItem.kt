@@ -32,7 +32,6 @@ import androidx.compose.material.icons.rounded.CheckCircleOutline
 import androidx.compose.material.icons.rounded.FiberManualRecord
 import androidx.compose.material.icons.rounded.Share
 import androidx.compose.material.icons.rounded.Star
-import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -61,10 +60,10 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.DpSize
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import coil.size.Precision
 import coil.size.Scale
@@ -85,17 +84,52 @@ import me.ash.reader.ui.component.FeedIcon
 import me.ash.reader.ui.component.base.RYAsyncImage
 import me.ash.reader.ui.component.base.SIZE_1000
 import me.ash.reader.ui.component.menu.AnimatedDropdownMenu
+import me.ash.reader.ui.ext.requiresBidi
 import me.ash.reader.ui.ext.surfaceColorAtElevation
 import me.ash.reader.ui.page.settings.color.flow.generateArticleWithFeedPreview
 import me.ash.reader.ui.theme.Shape20
+import me.ash.reader.ui.theme.applyTextDirection
 import me.ash.reader.ui.theme.palette.onDark
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun ArticleItem(
     modifier: Modifier = Modifier,
     articleWithFeed: ArticleWithFeed,
     onClick: (ArticleWithFeed) -> Unit = {},
+    onLongClick: (() -> Unit)? = null
+) {
+    val feed = articleWithFeed.feed
+    val article = articleWithFeed.article
+
+    ArticleItem(
+        modifier = modifier,
+        feedName = feed.name,
+        feedIconUrl = feed.icon,
+        title = article.title,
+        shortDescription = article.shortDescription,
+        dateString = article.dateString,
+        imgData = article.img,
+        isStarred = article.isStarred,
+        isUnread = article.isUnread,
+        onClick = { onClick(articleWithFeed) },
+        onLongClick = onLongClick
+    )
+
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+fun ArticleItem(
+    modifier: Modifier = Modifier,
+    feedName: String = "",
+    feedIconUrl: String? = null,
+    title: String = "",
+    shortDescription: String = "",
+    dateString: String? = null,
+    imgData: Any? = null,
+    isStarred: Boolean = false,
+    isUnread: Boolean = false,
+    onClick: () -> Unit = {},
     onLongClick: (() -> Unit)? = null
 ) {
     val articleListFeedIcon = LocalFlowArticleListFeedIcon.current
@@ -110,11 +144,11 @@ fun ArticleItem(
             .padding(horizontal = 12.dp)
             .clip(Shape20)
             .combinedClickable(
-                onClick = { onClick(articleWithFeed) },
+                onClick = onClick,
                 onLongClick = onLongClick,
             )
             .padding(horizontal = 12.dp, vertical = 12.dp)
-            .alpha(articleWithFeed.article.run {
+            .alpha(
                 when (articleListReadIndicator) {
                     FlowArticleReadIndicatorPreference.AllRead -> {
                         if (isUnread) 1f else 0.5f
@@ -124,7 +158,7 @@ fun ArticleItem(
                         if (isUnread || isStarred) 1f else 0.5f
                     }
                 }
-            }),
+            ),
     ) {
         // Top
         Row(
@@ -138,7 +172,7 @@ fun ArticleItem(
                     modifier = Modifier
                         .weight(1f)
                         .padding(start = if (articleListFeedIcon.value) 30.dp else 0.dp),
-                    text = articleWithFeed.feed.name,
+                    text = feedName,
                     color = MaterialTheme.colorScheme.tertiary,
                     style = MaterialTheme.typography.labelMedium,
                     maxLines = 1,
@@ -155,7 +189,7 @@ fun ArticleItem(
                         Spacer(Modifier.width(if (articleListFeedIcon.value) 30.dp else 0.dp))
                     }
                     // Starred
-                    if (articleWithFeed.article.isStarred) {
+                    if (isStarred) {
                         Icon(
                             modifier = Modifier
                                 .size(14.dp)
@@ -169,7 +203,7 @@ fun ArticleItem(
                     // Date
                     Text(
                         modifier = Modifier,
-                        text = articleWithFeed.article.dateString ?: "",
+                        text = dateString ?: "",
                         color = MaterialTheme.colorScheme.outlineVariant,
                         style = MaterialTheme.typography.labelMedium,
                     )
@@ -185,7 +219,7 @@ fun ArticleItem(
         ) {
             // Feed icon
             if (articleListFeedIcon.value) {
-                FeedIcon(articleWithFeed.feed.name, iconUrl = articleWithFeed.feed.icon)
+                FeedIcon(feedName, iconUrl = feedIconUrl)
                 Spacer(modifier = Modifier.width(10.dp))
             }
 
@@ -196,20 +230,22 @@ fun ArticleItem(
 
                 // Title
                 Text(
-                    text = articleWithFeed.article.title,
+                    text = title,
                     color = MaterialTheme.colorScheme.onSurface,
-                    style = MaterialTheme.typography.titleMedium,
+                    style = MaterialTheme.typography.titleMedium.applyTextDirection(title.requiresBidi()),
                     maxLines = if (articleListDesc.value) 2 else 4,
                     overflow = TextOverflow.Ellipsis,
                 )
 
                 // Description
-                if (articleListDesc.value && articleWithFeed.article.shortDescription.isNotBlank()) {
+                if (articleListDesc.value && shortDescription.isNotBlank()) {
                     Text(
                         modifier = Modifier.padding(top = 4.dp),
-                        text = articleWithFeed.article.shortDescription,
+                        text = shortDescription,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        style = MaterialTheme.typography.bodySmall,
+                        style = MaterialTheme.typography.bodySmall.applyTextDirection(
+                            shortDescription.requiresBidi()
+                        ),
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis,
                     )
@@ -217,13 +253,13 @@ fun ArticleItem(
             }
 
             // Image
-            if (articleWithFeed.article.img != null && articleListImage.value) {
+            if (imgData != null && articleListImage.value) {
                 RYAsyncImage(
                     modifier = Modifier
                         .padding(start = 10.dp)
                         .size(80.dp)
                         .clip(Shape20),
-                    data = articleWithFeed.article.img,
+                    data = imgData,
                     scale = Scale.FILL,
                     precision = Precision.INEXACT,
                     size = SIZE_1000,
@@ -377,9 +413,7 @@ fun SwipeableArticleItem(
                             expanded = expanded,
                             onDismissRequest = { expanded = false },
                             offset = density.run {
-                                if (LocalLayoutDirection.current == LayoutDirection.Ltr)
-                                    DpOffset(menuOffset.x.toDp(), 0.dp)
-                                else DpOffset(0.dp, 0.dp)
+                                DpOffset(menuOffset.x.toDp(), 0.dp)
                             },
                         ) {
                             ArticleItemMenuContent(

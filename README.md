@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="https://raw.githubusercontent.com/Ashinch/ReadYou/main/fastlane/metadata/android/en-US/images/icon.png">
+    <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/en-US/images/icon.png">
 </div>
 
 <br>
@@ -23,4 +23,4 @@
 
 ## License
 
-GNU GPL v3.0 © [Lectio](https://github.com/RBWare/ReadYou/blob/main/LICENSE)
+GNU GPL v3.0 © [Lectio](https://github.com/RBWare/Lectio/blob/main/LICENSE)

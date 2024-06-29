@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Workaround for https://github.com/Ashinch/ReadYou/issues/312: increase cursor window size
+        // Workaround for https://github.com/RBWare/Lectio/issues/312: increase cursor window size
         try {
             val field: Field = CursorWindow::class.java.getDeclaredField("sCursorWindowSize")
             field.isAccessible = true

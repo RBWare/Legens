@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="https://raw.githubusercontent.com/Ashinch/ReadYou/main/fastlane/metadata/android/zh-CN/images/icon.png">
+    <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/zh-CN/images/icon.png">
 </div>
 
 <br>
@@ -7,11 +7,11 @@
 <br>
 
 <div align="center">
-    <img alt="GitHub" src="https://img.shields.io/github/license/Ashinch/ReadYou?color=c3e7ff&style=flat-square">
-    <a target="_blank" href="https://github.com/Ashinch/ReadYou/releases">
-        <img alt="Version" src="https://img.shields.io/github/v/release/Ashinch/ReadYou?color=c3e7ff&label=version&style=flat-square">
+    <img alt="GitHub" src="https://img.shields.io/github/license/RBWare/Lectio?color=c3e7ff&style=flat-square">
+    <a target="_blank" href="https://github.com/RBWare/Lectio/releases">
+        <img alt="Version" src="https://img.shields.io/github/v/release/RBWare/Lectio?color=c3e7ff&label=version&style=flat-square">
     </a>
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Ashinch/ReadYou?color=c3e7ff&style=flat-square">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/RBWare/Lectio?color=c3e7ff&style=flat-square">
     <br>
     <a target="_blank" href="https://t.me/ReadYouApp">
         <img alt="Telegram" src="https://img.shields.io/badge/Telegram-ReadYouApp-c3e7ff?logo=telegram&style=flat-square">
@@ -24,18 +24,18 @@
 <div align="center">
     <h1>Lectio</h1>
     <p>一个以 <a target="_blank" href="https://m3.material.io/">Material You</a> 风格呈现的 Android RSS 阅读器。</p>
-    <a target="_blank" href="https://github.com/Ashinch/ReadYou/blob/main/README.md">English</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a target="_blank" href="https://github.com/Ashinch/ReadYou/blob/main/README-de.md">Deutsch</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a target="_blank" href="https://github.com/RBWare/Lectio/blob/main/README.md">English</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a target="_blank" href="https://github.com/RBWare/Lectio/blob/main/README-de.md">Deutsch</a>&nbsp;&nbsp;|&nbsp;&nbsp;
     简体中文&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a target="_blank" href="https://github.com/Ashinch/ReadYou/blob/main/README-zh-TW.md">繁體中文</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a target="_blank" href="https://github.com/Ashinch/ReadYou/blob/main/README-fa.md">فارسی</a></p>
+    <a target="_blank" href="https://github.com/RBWare/Lectio/blob/main/README-zh-TW.md">繁體中文</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a target="_blank" href="https://github.com/RBWare/Lectio/blob/main/README-fa.md">فارسی</a></p>
     <br/>
     <br/>
-    <img src="https://raw.githubusercontent.com/Ashinch/ReadYou/main/fastlane/metadata/android/zh-CN/images/phoneScreenshots/startup.png" width="19.2%"alt="startup" />
-    <img src="https://raw.githubusercontent.com/Ashinch/ReadYou/main/fastlane/metadata/android/zh-CN/images/phoneScreenshots/feeds.png" width="19.2%" alt="feeds" />
-    <img src="https://raw.githubusercontent.com/Ashinch/ReadYou/main/fastlane/metadata/android/zh-CN/images/phoneScreenshots/flow.png" width="19.2%" alt="flow" />
-    <img src="https://raw.githubusercontent.com/Ashinch/ReadYou/main/fastlane/metadata/android/zh-CN/images/phoneScreenshots/read.png" width="19.2%" alt="read" />
-    <img src="https://raw.githubusercontent.com/Ashinch/ReadYou/main/fastlane/metadata/android/zh-CN/images/phoneScreenshots/settings.png" width="19.2%" alt="settings" />
+    <img src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/zh-CN/images/phoneScreenshots/startup.png" width="19.2%"alt="startup" />
+    <img src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/zh-CN/images/phoneScreenshots/feeds.png" width="19.2%" alt="feeds" />
+    <img src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/zh-CN/images/phoneScreenshots/flow.png" width="19.2%" alt="flow" />
+    <img src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/zh-CN/images/phoneScreenshots/read.png" width="19.2%" alt="read" />
+    <img src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/zh-CN/images/phoneScreenshots/settings.png" width="19.2%" alt="settings" />
     <br/>
     <br/>
 </div>
@@ -71,7 +71,7 @@
 
 ## 下载
 
-[<img src="https://s1.ax1x.com/2023/01/12/pSu1a36.png" alt="Get it on GitHub" height="80">](https://github.com/Ashinch/ReadYou/releases)
+[<img src="https://s1.ax1x.com/2023/01/12/pSu1a36.png" alt="Get it on GitHub" height="80">](https://github.com/RBWare/Lectio/releases)
 [<img src="https://s1.ax1x.com/2023/01/12/pSnTZ0f.png"
      alt="Get it on Telegram Channel"
      height="80">](https://t.me/ReadYouApp)
@@ -85,7 +85,7 @@ F-Droid 版本与其他版本不兼容，您无法通过覆盖安装包来升级
 
 我们提供夜间构建用于测试目的，这些版本包含最新的功能和改进，但可能不如常规版本稳定。请注意，夜间版本可能存在 bug，并且不建议日常使用。
 
-<a target="_blank" href="https://github.com/Ashinch/ReadYou/actions/workflows/build_commit.yaml">检查夜间构建</a>
+<a target="_blank" href="https://github.com/RBWare/Lectio/actions/workflows/build_commit.yaml">检查夜间构建</a>
 
 从 GitHub Actions 页面选择最新的 workflow，并从该 workflow 的摘要页面下载构建文件（您可能需要登录 GitHub）。
 
@@ -109,14 +109,14 @@ F-Droid 版本与其他版本不兼容，您无法通过覆盖安装包来升级
 
 ## 构建
 
-> 欢迎 [提交](https://github.com/Ashinch/ReadYou/pulls) 您的代码，[GitHub Actions](https://github.com/Ashinch/ReadYou/actions) 为每次提交都自动打包了所有分发渠道的 APK 文件。
+> 欢迎 [提交](https://github.com/RBWare/Lectio/pulls) 您的代码，[GitHub Actions](https://github.com/RBWare/Lectio/actions) 为每次提交都自动打包了所有分发渠道的 APK 文件。
 
 **Lectio** 基于 [Jetpack Compose](https://developer.android.com/jetpack/compose) 工具包来构建 Android 原生用户界面。
 
 1. 首先您需要获取 **Lectio** 的源代码：
 
     ```shell
-    git clone https://github.com/Ashinch/ReadYou.git
+    git clone https://github.com/RBWare/Lectio.git
     ```
 
 2. 然后通过 [Android Studio (最新版本)](https://developer.android.com/studio) 打开。
@@ -157,4 +157,4 @@ F-Droid 版本与其他版本不兼容，您无法通过覆盖安装包来升级
 
 ## 许可证
 
-GNU GPL v3.0 © [Lectio](https://github.com/Ashinch/ReadYou/blob/main/LICENSE)
+GNU GPL v3.0 © [Lectio](https://github.com/RBWare/Lectio/blob/main/LICENSE)

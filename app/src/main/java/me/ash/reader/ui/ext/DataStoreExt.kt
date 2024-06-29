@@ -109,6 +109,9 @@ data class DataStoreKey<T>(
         const val amoledDarkTheme = "amoledDarkTheme"
         const val basicFonts = "basicFonts"
 
+        // Filters page
+        const val filterDuplicates = "filterDuplicates"
+
         // Feeds page
         const val feedsFilterBarStyle = "feedsFilterBarStyle"
         const val feedsFilterBarFilled = "feedsFilterBarFilled"
@@ -184,6 +187,7 @@ data class DataStoreKey<T>(
             darkTheme to DataStoreKey(intPreferencesKey(darkTheme), Int::class.java),
             amoledDarkTheme to DataStoreKey(booleanPreferencesKey(amoledDarkTheme), Boolean::class.java),
             basicFonts to DataStoreKey(intPreferencesKey(basicFonts), Int::class.java),
+            filterDuplicates to DataStoreKey(booleanPreferencesKey(filterDuplicates), Boolean::class.java),
             // Feeds page
             feedsFilterBarStyle to DataStoreKey(intPreferencesKey(feedsFilterBarStyle), Int::class.java),
             feedsFilterBarFilled to DataStoreKey(booleanPreferencesKey(feedsFilterBarFilled), Boolean::class.java),
@@ -274,12 +278,5 @@ suspend fun String.fromJSONStringToDataStore(context: Context) {
                 }
             }
         }
-    }
-
-    // Filters
-    object FilterDuplicates : DataStoreKeys<Boolean>() {
-
-        override val key: Preferences.Key<Boolean>
-            get() = booleanPreferencesKey("filterDuplicates")
     }
 }

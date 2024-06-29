@@ -18,7 +18,7 @@
 
 9. Weitere Detailänderungen
 
-Jetzt, da Read You über grundlegende lokale Lesefunktionen verfügt, werden diese drei Dinge die nächste Priorität sein.
+Jetzt, da Lectio über grundlegende lokale Lesefunktionen verfügt, werden diese drei Dinge die nächste Priorität sein.
 
 1. Einige Kontoeinstellungen (z.B. Synchronisierungsintervall)
 

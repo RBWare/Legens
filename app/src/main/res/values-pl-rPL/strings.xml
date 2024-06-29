@@ -108,7 +108,7 @@
     <string name="tips_and_support">Porady i wsparcie</string>
     <string name="tips_and_support_desc">O aplikacji i licencjach open source</string>
     <string name="welcome">Witamy</string>
-    <string name="tos_tips">Korzystając z Read You akceptujesz Warunki Świadczenia Usług i Politykę Prywatności. Kliknij "Zgadzam się" aby kontynuować.</string>
+    <string name="tos_tips">Korzystając z Lectio akceptujesz Warunki Świadczenia Usług i Politykę Prywatności. Kliknij "Zgadzam się" aby kontynuować.</string>
     <string name="browse_tos_tips">Zapoznaj się z &lt;i&gt;&lt;u&gt;Warunkami Świadczenia Usługi oraz Polityką Prywatności&lt;/u&gt;&lt;/i&gt;
     </string>
     <string name="terms_of_service">Warunki świadczenia usługi</string>
@@ -126,7 +126,7 @@
         &lt;/p&gt;
         &lt;br/&gt;
         &lt;p&gt;
-        &lt;b&gt;Read You&lt;/b&gt;
+        &lt;b&gt;Lectio&lt;/b&gt;
 
         nie gromadzi danych na temat użytkownika, a wszelkie poufne informacje (hasła i inne informacje dotyczące kont) są
         bezpiecznie przechowywane w lokalnej bazie danych na twoim urządzeniu.
@@ -134,7 +134,7 @@
         &lt;/p&gt;
         &lt;br/&gt;
         &lt;p&gt;
-        &lt;b&gt;Read You&lt;/b&gt;
+        &lt;b&gt;Lectio&lt;/b&gt;
 
         korzysta z poniższych uprawnień w celu świadczenia usług.
 
@@ -166,7 +166,7 @@
         &lt;br/&gt;
         &lt;p&gt;
 
-        Ta umowa nie tyczy się stron podmiotów trzecich z którymi użytkownik łączy się za pomocą &lt;b&gt;Read You&lt;/b&gt;.
+        Ta umowa nie tyczy się stron podmiotów trzecich z którymi użytkownik łączy się za pomocą &lt;b&gt;Lectio&lt;/b&gt;.
         Zasady ochrony prywatności tych serwisów można sprawdzić na ich poszczególnych stronach internetowych
 
         &lt;/p&gt;
@@ -179,9 +179,9 @@
         &lt;/h5&gt;
         &lt;br/&gt;
         &lt;p&gt;
-        &lt;b&gt;Read You&lt;/b&gt;
+        &lt;b&gt;Lectio&lt;/b&gt;
 
-        jest jedynie agregatem treści. Sposób, w jaki użytkownik korzysta z &lt;b&gt;Read You&lt;/b&gt; podlega lokalnym prawom i
+        jest jedynie agregatem treści. Sposób, w jaki użytkownik korzysta z &lt;b&gt;Lectio&lt;/b&gt; podlega lokalnym prawom i
         przepisom obowiązującym w miejscu zamieszkania. Odpowiedzialność i ewentualne konsekwencje wynikające z niewłaściwego korzystania z oprogramowania są ponoszone osobiście przez użytkownika.
 
         &lt;/p&gt;
@@ -194,9 +194,9 @@
         &lt;/h5&gt;
         &lt;br/&gt;
         &lt;p&gt;
-        &lt;b&gt;Read You&lt;/b&gt;
+        &lt;b&gt;Lectio&lt;/b&gt;
 
-        jest projektem otwarto-źródłowym na licencji GNU GPL 3.0 Open Source License[1], pozwalającej na darmowe używanie, analizowanie i modyfikowanie kodu źródłowego &lt;b&gt;Read You&lt;/b&gt;. Zabroniona jest
+        jest projektem otwarto-źródłowym na licencji GNU GPL 3.0 Open Source License[1], pozwalającej na darmowe używanie, analizowanie i modyfikowanie kodu źródłowego &lt;b&gt;Lectio&lt;/b&gt;. Zabroniona jest
         dystrybucja i sprzedaż zmodyfikowanego bądź pochodnego kodu w formie komercyjnego oprogramowania własnościowego. W celu uzyskania szczegółowych informacji, proszę odwiedzić stronę pełnej licencji GNU GPL 3.0 Open Source License[2].
 
         &lt;/p&gt;

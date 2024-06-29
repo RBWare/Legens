@@ -12,7 +12,7 @@
 
 ### Anmerkungen
 
-Das war eine starke Woche für Read You! Diese Version behebt viele der restlichen großen Fehler aus Version 0.9.9, sowie einen, der schon lange besteht.
+Das war eine starke Woche für Lectio! Diese Version behebt viele der restlichen großen Fehler aus Version 0.9.9, sowie einen, der schon lange besteht.
 
 Ich hoffe, dass dies eine solide, langfristige Version sein wird und wir eine Pause von weiteren Veröffentlichungen einlegen können, während wir auf neue Verbesserungen unserer wunderbaren Community warten. Wie immer gilt: Wenn ihr Fehler findet, meldet diese bitte auf Github!
 

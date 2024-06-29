@@ -9,7 +9,7 @@
 4. Sửa lỗi không thể sửa đổi các cài đặt tài khoản khác
 
 Sốt là một API lỗi thời, không hoàn toàn tương thích với các trình đọc hiện đại.
-Nhưng với tư cách là API dịch vụ bên thứ ba đầu tiên được Read You hỗ trợ, đây là cơ hội tốt để bắt đầu.
+Nhưng với tư cách là API dịch vụ bên thứ ba đầu tiên được Lectio hỗ trợ, đây là cơ hội tốt để bắt đầu.
 
 Sẽ có một bản cập nhật bổ sung trong thời gian tới để sửa lỗi và bổ sung bản dịch.
 

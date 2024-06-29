@@ -9,7 +9,7 @@
 4. Diğer hesap ayarlarını değiştirememe hatasını düzeltin
 
 Fever, modern okuyucularla tam olarak uyumlu olmayan eski bir API'dir.
-Ancak Read You tarafından desteklenen ilk üçüncü taraf hizmet API'si olarak başlamak için iyi bir fırsat.
+Ancak Lectio tarafından desteklenen ilk üçüncü taraf hizmet API'si olarak başlamak için iyi bir fırsat.
 
 Hata düzeltmeleri ve ek çeviriler için yakın gelecekte ek bir güncelleme olacak.
 

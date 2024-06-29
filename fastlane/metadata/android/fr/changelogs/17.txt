@@ -9,7 +9,7 @@
 4. Correction d’un bug empêchant la modification des paramètres d’un autre compte
 
 Fever est une API obsolète, qui n’est pas compatible avec les lecteurs modernes.
-Cependant il représente une bonne opportunité pour commencer, en tant que première API de service tiers pris en charge par Read You.
+Cependant il représente une bonne opportunité pour commencer, en tant que première API de service tiers pris en charge par Lectio.
 
 Une mise à jour additionnelle sera disponible prochainement pour corriger des bugs et ajouter de nouvelles traductions.
 

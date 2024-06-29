@@ -22,7 +22,7 @@
 </div>
 
 <div align="center">
-    <h1>Read You</h1>
+    <h1>Lectio</h1>
     <p>Ein Android RSS-Reader, präsentiert im <a target="_blank" href="https://m3.material.io/">Material You</a> Designstil.</p>
     <p><a target="_blank" href="https://github.com/Ashinch/ReadYou/blob/main/README.md">English</a>&nbsp;&nbsp;|&nbsp;&nbsp;
     Deutsch&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -42,7 +42,7 @@
 
 ## Funktionen
 
-**Read You** ist ein Android RSS-Reader, präsentiert im [Material You](https://m3.material.io/) Designstil.
+**Lectio** ist ein Android RSS-Reader, präsentiert im [Material You](https://m3.material.io/) Designstil.
 
 Nachfolgend sind die bisher erzielten Fortschritte und die Ziele aufgeführt, an denen in naher Zukunft gearbeitet werden soll:
 
@@ -59,7 +59,7 @@ Nachfolgend sind die bisher erzielten Fortschritte und die Ziele aufgeführt, an
 
 ## Integration
 
-**Read You** ist mit einigen APIs von Drittanbietern kompatibel, um bei der Nutzung Ihrer bestehenden Cloud-Konten als Datenquellen zu unterstützen.
+**Lectio** ist mit einigen APIs von Drittanbietern kompatibel, um bei der Nutzung Ihrer bestehenden Cloud-Konten als Datenquellen zu unterstützen.
 
 - [x] Fever
 - [x] Google Reader
@@ -97,7 +97,7 @@ Wählen Sie den neuesten Workflow auf der GitHub Actions-Seite aus und laden Sie
 
 ## Spenden
 
-**Read You** ist eine kostenlose Open-Source-Software, die von der Open-Source-Gemeinschaft profitiert, und jeder Benutzer kann ihre volle Funktionalität kostenlos genießen. Wenn Sie also meine aktuelle Arbeit wertschätzen, können Sie mir gerne eine Tasse Kaffee spendieren ☕️.
+**Lectio** ist eine kostenlose Open-Source-Software, die von der Open-Source-Gemeinschaft profitiert, und jeder Benutzer kann ihre volle Funktionalität kostenlos genießen. Wenn Sie also meine aktuelle Arbeit wertschätzen, können Sie mir gerne eine Tasse Kaffee spendieren ☕️.
 
 [<img src="https://s1.ax1x.com/2023/01/12/pSnHqpQ.png" alt="donate" height="80">](https://afdian.net/a/ashinch)
 
@@ -105,7 +105,7 @@ Danke für all die Liebe und Unterstützung ❤️
 
 ## Übersetzen
 
-Vielen Dank an alle **Read You** Übersetzer, und wenn Sie einen Beitrag leisten möchten, reichen Sie bitte eine Übersetzung über [Weblate](https://hosted.weblate.org/engage/readyou/) ein.
+Vielen Dank an alle **Lectio** Übersetzer, und wenn Sie einen Beitrag leisten möchten, reichen Sie bitte eine Übersetzung über [Weblate](https://hosted.weblate.org/engage/readyou/) ein.
 
 [<img src="https://hosted.weblate.org/widgets/readyou/-/horizontal-auto.svg" alt="Übersetzungsstatus" />](https://hosted.weblate.org/engage/readyou/)
 
@@ -113,9 +113,9 @@ Vielen Dank an alle **Read You** Übersetzer, und wenn Sie einen Beitrag leisten
 
 > Gerne können Sie einen [Pull Request](https://github.com/Ashinch/ReadYou/pulls) öffnen. [GitHub Actions](https://github.com/Ashinch/ReadYou/actions) verpackt automatisch alle Varianten an APK Dateien für jeden Commit.
 
-**Read You** ist auf der Android nativen [Jetpack Compose](https://developer.android.com/jetpack/compose) Architektur implementiert.
+**Lectio** ist auf der Android nativen [Jetpack Compose](https://developer.android.com/jetpack/compose) Architektur implementiert.
 
-1. Zuerst müssen Sie sich den Quellcode von **Read You** herunterladen.
+1. Zuerst müssen Sie sich den Quellcode von **Lectio** herunterladen.
 
     ```shell
     git clone https://github.com/Ashinch/ReadYou.git
@@ -146,16 +146,16 @@ Vielen Dank an alle **Read You** Übersetzer, und wenn Sie einen Beitrag leisten
 
 [<img src="https://avatars.githubusercontent.com/u/76829190?v=4" width="180" height="180" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;"/>](https://github.com/Kyant0)
 
-Vielen Dank an **@Kyant0** für die Design-Inspiration und die Implementierung der Monet-Engine für **Read You**.
+Vielen Dank an **@Kyant0** für die Design-Inspiration und die Implementierung der Monet-Engine für **Lectio**.
 
 [<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" width="200" alt="Copyright © 2000-2023 JetBrains s.r.o. JetBrains and the JetBrains logo are registered trademarks of JetBrains s.r.o."/>](https://www.jetbrains.com/)
 
-Vielen Dank an **JetBrains** für die Bereitstellung von kostenlosen Open-Source-Lizenzen für IDEs für **Read You**.
+Vielen Dank an **JetBrains** für die Bereitstellung von kostenlosen Open-Source-Lizenzen für IDEs für **Lectio**.
 
 [<img src="https://hosted.weblate.org/widgets/readyou/-/287x66-white.png"  width="200"/>](https://hosted.weblate.org/engage/readyou/)
 
-Vielen Dank an **Weblate** für das kostenlose Hosting von Open-Source-Projekten für **Read You**.
+Vielen Dank an **Weblate** für das kostenlose Hosting von Open-Source-Projekten für **Lectio**.
 
 ## Lizenz
 
-GNU GPL v3.0 © [Read You](https://github.com/Ashinch/ReadYou/blob/main/LICENSE)
+GNU GPL v3.0 © [Lectio](https://github.com/Ashinch/ReadYou/blob/main/LICENSE)

@@ -22,7 +22,7 @@
 </div>
 
 <div dir="rtl" align="center">
-    <h1 dir="ltr">Read You</h1>
+    <h1 dir="ltr">Lectio</h1>
     <p>این اپلیکیشن، یک کپی از <a href="https://reederapp.com/">Reeder</a> به منظور ارائه یک خبرخوان RSS مشابه Reeder برای اندروید است.</p>
     <p>فارسی&nbsp;&nbsp;|&nbsp;&nbsp;
     <a target="_blank" href="https://github.com/Ashinch/ReadYou/blob/main/README-de.md">Deutsch</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -42,7 +42,7 @@
 
 ## ویژگی ها
 
-اپلیکیشن **Read You** منطق Reeder را با [متریال دیزاین ۳ (You)](https://m3.material.io/) ترکیب نموده.
+اپلیکیشن **Lectio** منطق Reeder را با [متریال دیزاین ۳ (You)](https://m3.material.io/) ترکیب نموده.
 
 پیشرفت های انجام شده تا کنون و اهدافی که به زودی روی آن ها کار خواهد شد به شرح زیر است:
 
@@ -89,11 +89,11 @@
 
 ## بیلد
 
-> اگر به نسخه پیش‌نمایش برنامه Read You نیاز دارید،  می‌توانید فایل های APK **preview version**  را از [تلگرام](https://t.me/ReadYouApp) دریافت کنید.
+> اگر به نسخه پیش‌نمایش برنامه Lectio نیاز دارید،  می‌توانید فایل های APK **preview version**  را از [تلگرام](https://t.me/ReadYouApp) دریافت کنید.
 
-اپلیکیشن **Read You** به صورت نیتیو پیاده سازی و با [Jetpack Compose](https://developer.android.com/jetpack/compose) طراحی شده است.
+اپلیکیشن **Lectio** به صورت نیتیو پیاده سازی و با [Jetpack Compose](https://developer.android.com/jetpack/compose) طراحی شده است.
 
-۱. ابتدا لازم است سورس کد **Read You** را کلون کنید:
+۱. ابتدا لازم است سورس کد **Lectio** را کلون کنید:
 
 ```shell
     git clone https://github.com/Ashinch/ReadYou.git

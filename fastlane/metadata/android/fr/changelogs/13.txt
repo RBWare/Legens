@@ -18,7 +18,7 @@
 
 9. D'autres détails changés
 
-Maintenant que Read You a la fonctionnalité de lecture basique en local, ces trois choses vont être notre prochaine priorité.
+Maintenant que Lectio a la fonctionnalité de lecture basique en local, ces trois choses vont être notre prochaine priorité.
 
 1. Certains paramètres de compte (ex. : intervalle de synchronisation)
 

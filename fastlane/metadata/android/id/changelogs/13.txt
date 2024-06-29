@@ -18,7 +18,7 @@
 
 9. Perubahan detail lainnya
 
-Sekarang Read You memiliki fungsi dasar membaca lokal, tiga hal ini akan menjadi prioritas selanjutnya.
+Sekarang Lectio memiliki fungsi dasar membaca lokal, tiga hal ini akan menjadi prioritas selanjutnya.
 
 1. Beberapa pengaturan akun (seperti interval sinkron)
 

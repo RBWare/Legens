@@ -22,7 +22,7 @@
 </div>
 
 <div align="center">
-    <h1>Read You</h1>
+    <h1>Lectio</h1>
     <p>一个以 <a target="_blank" href="https://m3.material.io/">Material You</a> 风格呈现的 Android RSS 阅读器。</p>
     <a target="_blank" href="https://github.com/Ashinch/ReadYou/blob/main/README.md">English</a>&nbsp;&nbsp;|&nbsp;&nbsp;
     <a target="_blank" href="https://github.com/Ashinch/ReadYou/blob/main/README-de.md">Deutsch</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -42,7 +42,7 @@
 
 ## 特性
 
-**Read You** 是一个以 [Material You](https://m3.material.io/) 风格呈现的 Android RSS 阅读器，这些是目前已完成的功能和未来要做的事。
+**Lectio** 是一个以 [Material You](https://m3.material.io/) 风格呈现的 Android RSS 阅读器，这些是目前已完成的功能和未来要做的事。
 
 - [x] 订阅 RSS 链接
 - [x] 导入 / 导出 OPML 文件
@@ -57,7 +57,7 @@
 
 ## 集成
 
-**Read You** 也集成了一些第三方服务 API，支持您使用已有的云端账户来作为数据源。
+**Lectio** 也集成了一些第三方服务 API，支持您使用已有的云端账户来作为数据源。
 
 - [x] Fever
 - [x] Google Reader
@@ -93,7 +93,7 @@ F-Droid 版本与其他版本不兼容，您无法通过覆盖安装包来升级
 
 ## 捐赠
 
-**Read You** 是一款免费的自由开源软件，它受益于开源社区，每一位用户都能够免费享受到它完整的功能，如果您赞赏我目前的工作，可以选择请我喝一杯咖啡 ☕️。
+**Lectio** 是一款免费的自由开源软件，它受益于开源社区，每一位用户都能够免费享受到它完整的功能，如果您赞赏我目前的工作，可以选择请我喝一杯咖啡 ☕️。
 
 [<img src="https://s1.ax1x.com/2023/01/12/pSnHqpQ.png"
      alt="donate"
@@ -103,7 +103,7 @@ F-Droid 版本与其他版本不兼容，您无法通过覆盖安装包来升级
 
 ## 本地化
 
-感谢每一位 **Read You** 的翻译人员，如果您也希望做出贡献，请通过 [Weblate](https://hosted.weblate.org/engage/readyou/) 来提交翻译文本。
+感谢每一位 **Lectio** 的翻译人员，如果您也希望做出贡献，请通过 [Weblate](https://hosted.weblate.org/engage/readyou/) 来提交翻译文本。
 
 [<img src="https://hosted.weblate.org/widgets/readyou/-/horizontal-auto.svg" alt="" />](https://hosted.weblate.org/engage/readyou/)
 
@@ -111,9 +111,9 @@ F-Droid 版本与其他版本不兼容，您无法通过覆盖安装包来升级
 
 > 欢迎 [提交](https://github.com/Ashinch/ReadYou/pulls) 您的代码，[GitHub Actions](https://github.com/Ashinch/ReadYou/actions) 为每次提交都自动打包了所有分发渠道的 APK 文件。
 
-**Read You** 基于 [Jetpack Compose](https://developer.android.com/jetpack/compose) 工具包来构建 Android 原生用户界面。
+**Lectio** 基于 [Jetpack Compose](https://developer.android.com/jetpack/compose) 工具包来构建 Android 原生用户界面。
 
-1. 首先您需要获取 **Read You** 的源代码：
+1. 首先您需要获取 **Lectio** 的源代码：
 
     ```shell
     git clone https://github.com/Ashinch/ReadYou.git
@@ -145,16 +145,16 @@ F-Droid 版本与其他版本不兼容，您无法通过覆盖安装包来升级
 
 [<img src="https://avatars.githubusercontent.com/u/76829190?v=4" width="180" height="180" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;"/>](https://github.com/Kyant0)
 
-感谢 **@Kyant0** 为 **Read You** 提供的设计灵感与 Monet 引擎实现。
+感谢 **@Kyant0** 为 **Lectio** 提供的设计灵感与 Monet 引擎实现。
 
 [<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" width="200" alt="Copyright © 2000-2023 JetBrains s.r.o. JetBrains and the JetBrains logo are registered trademarks of JetBrains s.r.o."/>](https://www.jetbrains.com/)
 
-感谢 **JetBrains** 为 **Read You** 提供的开源项目产品许可证。
+感谢 **JetBrains** 为 **Lectio** 提供的开源项目产品许可证。
 
 [<img src="https://hosted.weblate.org/widgets/readyou/-/287x66-white.png"  width="200"/>](https://hosted.weblate.org/engage/readyou/)
 
-感谢 **Weblate** 为 **Read You** 提供的开源项目免费托管服务。
+感谢 **Weblate** 为 **Lectio** 提供的开源项目免费托管服务。
 
 ## 许可证
 
-GNU GPL v3.0 © [Read You](https://github.com/Ashinch/ReadYou/blob/main/LICENSE)
+GNU GPL v3.0 © [Lectio](https://github.com/Ashinch/ReadYou/blob/main/LICENSE)

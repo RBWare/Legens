@@ -18,7 +18,7 @@
 
 9. Thay đổi khác
 
-Bây giờ Read You có chức năng đọc cục bộ cơ bản, ba điều này sẽ là ưu tiên tiếp theo.
+Bây giờ Lectio có chức năng đọc cục bộ cơ bản, ba điều này sẽ là ưu tiên tiếp theo.
 
 1. Một số cài đặt tài khoản (ví dụ: khoảng thời gian lấy dữ liệu)
 

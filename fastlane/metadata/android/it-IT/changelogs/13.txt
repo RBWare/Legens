@@ -18,7 +18,7 @@
 
 9. Modifiche minori
 
-Ora che Read You ha le funzionalità base di lettura locale, queste saranno le prossime tre priorità:
+Ora che Lectio ha le funzionalità base di lettura locale, queste saranno le prossime tre priorità:
 
 1. Alcune impostazioni dell'account (come ad esempio l'intervallo di sincronizzazione)
 

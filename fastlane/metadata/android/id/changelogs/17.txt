@@ -9,7 +9,7 @@
 4. Perbaiki bug yang tidak dapat Anda ubah pengaturan akun lainnya
 
 Fever adalah API usang yang tidak sepenuhnya kompatibel dengan pembaca modern.
-Tetapi sebagai API layanan pihak ketiga pertama yang didukung oleh Read You, ini adalah kesempatan bagus untuk memulai.
+Tetapi sebagai API layanan pihak ketiga pertama yang didukung oleh Lectio, ini adalah kesempatan bagus untuk memulai.
 
 Akan ada pembaruan tambahan dalam waktu dekat untuk perbaikan bug dan terjemahan tambahan.
 

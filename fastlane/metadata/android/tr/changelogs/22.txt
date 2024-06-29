@@ -12,7 +12,7 @@
 
 ### Notlar
 
-Read You için oldukça yoğun bir hafta oldu! Bu sürüm, 0.9.9 sürümünden kalan önemli hataların çoğunu ve uzun süredir var olan bir hatayı düzeltiyor.
+Lectio için oldukça yoğun bir hafta oldu! Bu sürüm, 0.9.9 sürümünden kalan önemli hataların çoğunu ve uzun süredir var olan bir hatayı düzeltiyor.
 
 Umuyorum ki bu uzun vadeli sağlam bir sürüm olacak ve harika topluluğumuzdan gelecek yeni iyileştirmeleri beklerken bir süreliğine sürümlere ara verebileceğiz. Her zaman olduğu gibi, bir hatayla karşılaşırsanız lütfen Github üzerinden bildirin!
 

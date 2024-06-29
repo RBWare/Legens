@@ -12,7 +12,7 @@
 
 ### Notas
 
-¡Ha pasado una semana para Read You! Esta versión corrige la mayoría del resto de los errores principales de la versión 0.9.9, además de uno que ha existido durante mucho tiempo.
+¡Ha pasado una semana para Lectio! Esta versión corrige la mayoría del resto de los errores principales de la versión 0.9.9, además de uno que ha existido durante mucho tiempo.
 
 Mi esperanza es que esto sea una construcción sólida a largo plazo, y que podamos tomarnos un descanso de los lanzamientos por un tiempo mientras esperamos nuevas mejoras para cocinar de nuestra maravillosa comunidad. ¡Como siempre, si te encuentras con un error, por favor reportarlo en Github!
 

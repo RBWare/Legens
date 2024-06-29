@@ -9,7 +9,7 @@
 4. Fixa felet att du inte kan ändra andra kontoinställningar
 
 Fever är ett föråldrat API, som inte är helt kompatibelt med moderna läsare.
-Men som den första tredjepartstjänstens API som stöds av Read You, är det ett bra tillfälle att komma igång.
+Men som den första tredjepartstjänstens API som stöds av Lectio, är det ett bra tillfälle att komma igång.
 
 Det kommer en kompletterande uppdatering inom en snar framtid för buggfixar och ytterligare översättningar.
 

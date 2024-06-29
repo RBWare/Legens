@@ -19,8 +19,8 @@
 - [ ] Stock / Crypto Tracking Support
 - [ ] Default Launcher Support
 
-**Read You** is an Android RSS reader presented in [Material You](https://m3.material.io/) style.
+**Lectio** is an Android RSS reader presented in [Material You](https://m3.material.io/) style. It s a fork of ReadYou.
 
 ## License
 
-GNU GPL v3.0 © [Read You](https://github.com/RBWare/ReadYou/blob/main/LICENSE)
+GNU GPL v3.0 © [Lectio](https://github.com/RBWare/ReadYou/blob/main/LICENSE)

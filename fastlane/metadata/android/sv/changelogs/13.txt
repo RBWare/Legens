@@ -18,7 +18,7 @@
 
 9. Ytterligare finjusteringar
 
-Read You har nu grundläggande språkstöd, fokus är på följande tre punkter:
+Lectio har nu grundläggande språkstöd, fokus är på följande tre punkter:
 
 1. Några kontoinställningar (m.a.o. avstämningsintervall)
 

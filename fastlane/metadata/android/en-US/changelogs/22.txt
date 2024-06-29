@@ -12,7 +12,7 @@
 
 ### Notes
 
-It's been quite a week for Read You! This release fixes up most of the rest of the major bugs from release 0.9.9, plus one that's been around for a long while.
+It's been quite a week for Lectio! This release fixes up most of the rest of the major bugs from release 0.9.9, plus one that's been around for a long while.
 
 My hope is that this will be a solid longer-term build, and we can take a break from releases for a bit while we wait for new improvements to cook from our wonderful community. As always, if you encounter a bug, please report it on Github!
 

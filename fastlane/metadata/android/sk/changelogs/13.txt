@@ -18,7 +18,7 @@
 
 9. Ďalšie drobné zmeny
 
-Teraz, keď má Read You základnú funkciu lokálneho čítania, budú tieto tri veci ďalšou prioritou.
+Teraz, keď má Lectio základnú funkciu lokálneho čítania, budú tieto tri veci ďalšou prioritou.
 
 1. Niektoré nastavenia účtu (napr. interval synchronizácie)
 

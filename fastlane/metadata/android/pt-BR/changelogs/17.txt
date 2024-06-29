@@ -9,7 +9,7 @@
 4. Corrigido o bug que você não pode modificar outras configurações da conta
 
 Fever é uma API desatualizada, que não é totalmente compatível com leitores modernos.
-Mas como é a primeira API de serviço de terceiros suportada pelo Read You, é uma boa oportunidade para começar.
+Mas como é a primeira API de serviço de terceiros suportada pelo Lectio, é uma boa oportunidade para começar.
 
 Haverá uma atualização suplementar em um futuro próximo para correções de bugs e traduções adicionais.
 

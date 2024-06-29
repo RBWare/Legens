@@ -18,7 +18,7 @@
 
 9. Inne poszczególne zmiany
 
-Teraz gdy Read You ma podstawowe funkcje lokalnego czytania, te trzy rzeczy będą następnym priorytetem.
+Teraz gdy Lectio ma podstawowe funkcje lokalnego czytania, te trzy rzeczy będą następnym priorytetem.
 
 1. Niektóre ustawienia konta (np. możliwość synchronizacji)
 

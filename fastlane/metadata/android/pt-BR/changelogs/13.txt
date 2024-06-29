@@ -18,7 +18,7 @@
 
 9. Outras alterações de detalhes.
 
-Agora que o Read You tem a funcionalidade básica de leitura local, essas três coisas serão prioridades:
+Agora que o Lectio tem a funcionalidade básica de leitura local, essas três coisas serão prioridades:
 
 1. Algumas configurações de conta (ex: Intervalo de sincronização)
 

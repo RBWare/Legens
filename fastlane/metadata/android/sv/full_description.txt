@@ -1,4 +1,4 @@
-<i>Read You</i> En modern och elegant RSS-läsare med <a href='https://m3.material.io/' target='_blank' rel='nofollow'>innehåll som du </a> skapar
+<i>Lectio</i> En modern och elegant RSS-läsare med <a href='https://m3.material.io/' target='_blank' rel='nofollow'>innehåll som du </a> skapar
 
 <b>Grunddrag:</b>
 

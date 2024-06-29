@@ -22,7 +22,7 @@
 </div>
 
 <div align="center">
-    <h1>Read You</h1>
+    <h1>Lectio</h1>
     <p>這是一個在 Android 上的  <a href="https://reederapp.com/">Reeder</a> 仿製品，為了讓 Android 擁有一個與 Reeder 相似的 RSS 閱讀器。</p>
     <p><a target="_blank" href="https://github.com/Ashinch/ReadYou/blob/main/README.md">English by DeepL</a>&nbsp;&nbsp;|&nbsp;&nbsp;
     <a target="_blank" href="https://github.com/Ashinch/ReadYou/blob/main/README-de.md">Deutsch</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -42,7 +42,7 @@
 
 ## 特性
 
-**Read You** 結合了 Reeder 的交互邏輯與 [Material Design 3 (You)](https://m3.material.io/) 的設計風格。
+**Lectio** 結合了 Reeder 的交互邏輯與 [Material Design 3 (You)](https://m3.material.io/) 的設計風格。
 
 以下是目前取得的進展和近期將要努力的目標：
 
@@ -86,11 +86,11 @@
 
 ## 構建
 
-> 如果你想要預覽 Read You 應用，可以在 [Telegram 頻道](https://t.me/ReadYouApp) 中獲取 **預覽版本** 的 APK 文件。
+> 如果你想要預覽 Lectio 應用，可以在 [Telegram 頻道](https://t.me/ReadYouApp) 中獲取 **預覽版本** 的 APK 文件。
 
-**Read You** 基於 Android 原生的 [Jetpack Compose](https://developer.android.com/jetpack/compose) 架構實現。
+**Lectio** 基於 Android 原生的 [Jetpack Compose](https://developer.android.com/jetpack/compose) 架構實現。
 
-1. 首先需要獲取 **Read You** 的原始碼：
+1. 首先需要獲取 **Lectio** 的原始碼：
 
     ```shell
     git clone https://github.com/Ashinch/ReadYou.git

@@ -12,7 +12,7 @@
 
 ### Remarques
 
-Cela est une sacrée semaine pour Read You ! Cette version corrige la plupart des autres bogues majeurs de la version 0.9.9, ainsi qu'un bogue qui existait depuis longtemps.
+Cela est une sacrée semaine pour Lectio ! Cette version corrige la plupart des autres bogues majeurs de la version 0.9.9, ainsi qu'un bogue qui existait depuis longtemps.
 
 J'espère qu'il s'agira d'une version solide à long terme, et que nous pourrons faire une pause dans les versions pendant un moment en attendant des nouvelles améliorations de notre merveilleuse communauté. Comme toujours, si vous rencontrez un bogue, merci de le signaler sur Github !
 

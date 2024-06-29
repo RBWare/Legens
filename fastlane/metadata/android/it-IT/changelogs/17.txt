@@ -9,7 +9,7 @@
 4. Sistemato il bug che non ti permette di modificare le impostazioni degli altri account
 
 Fever ha delle API datate che non sono pienamente compatibili con i moderni lettori.
-Essendo tuttavia le prime API di un servizio di terzi ad essere supportato da Read You, è un buon inizio.
+Essendo tuttavia le prime API di un servizio di terzi ad essere supportato da Lectio, è un buon inizio.
 
 Ci saranno aggiornamenti aggiuntivi nel prossimo futuro per sistemare errori e ulteriori traduzioni.
 

@@ -9,7 +9,7 @@
 4. Behebung des Fehlers, dass man andere Kontoeinstellungen nicht ändern kann
 
 Fever ist eine veraltete API, die nicht vollständig mit modernen Lesegeräten kompatibel ist.
-Aber als erste Drittanbieter-API, die von Read You unterstützt wird, ist sie eine gute Gelegenheit für den Einstieg.
+Aber als erste Drittanbieter-API, die von Lectio unterstützt wird, ist sie eine gute Gelegenheit für den Einstieg.
 
 In naher Zukunft wird es ein zusätzliches Update geben, das Fehler behebt und zusätzliche Übersetzungen enthält.
 

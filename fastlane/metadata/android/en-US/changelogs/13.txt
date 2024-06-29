@@ -18,7 +18,7 @@
 
 9. Other detail changes
 
-Now that Read You has basic local reading functionality, these three things will be the next priority.
+Now that Lectio has basic local reading functionality, these three things will be the next priority.
 
 1. Some account settings (e.g. sync interval)
 

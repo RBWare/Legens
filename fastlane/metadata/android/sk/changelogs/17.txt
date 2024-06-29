@@ -9,7 +9,7 @@
 4. Opravená chyba, že nemôžete upravovať iné nastavenia účtu
 
 Fever je zastarané API, ktoré nie je plne kompatibilné s modernými čítačkami.
-Ale ako prvé API služby tretej strany podporované Read You je to dobrá príležitosť začať.
+Ale ako prvé API služby tretej strany podporované Lectio je to dobrá príležitosť začať.
 
 V blízkej budúcnosti bude k dispozícii dodatočná aktualizácia pre opravy chýb a ďalšie preklady.
 

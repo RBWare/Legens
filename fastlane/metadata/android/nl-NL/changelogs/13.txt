@@ -18,7 +18,7 @@
 
 9. Andere detailwijzigingen
 
-Nu Read You de basisfunctionaliteit voor lokaal lezen heeft, hebben deze drie dingen de volgende prioriteit.
+Nu Lectio de basisfunctionaliteit voor lokaal lezen heeft, hebben deze drie dingen de volgende prioriteit.
 
 1. Enkele accountinstellingen (bijv. synchronisatie-interval)
 

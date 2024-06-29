@@ -18,7 +18,7 @@
 
 9. Diğer detay değişiklikler
 
-Read You artık temel yerel okuma işlevine sahip, şu üç şey sıradaki öncellikler olacaklar.
+Lectio artık temel yerel okuma işlevine sahip, şu üç şey sıradaki öncellikler olacaklar.
 
 1. Bazı hesap ayarları (örn. eşitleme sıklığı)
 

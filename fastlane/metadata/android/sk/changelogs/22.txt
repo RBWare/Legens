@@ -12,7 +12,7 @@
 
 ### Poznámky
 
-Na Read You to bol celkom týždeň! Toto vydanie opravuje väčšinu zvyšných hlavných chýb z vydania 0.9.9, plus jednu, ktorá je tu už dlho.
+Na Lectio to bol celkom týždeň! Toto vydanie opravuje väčšinu zvyšných hlavných chýb z vydania 0.9.9, plus jednu, ktorá je tu už dlho.
 
 Dúfam, že to bude solídna dlhodobá zostava a môžeme si na chvíľu oddýchnuť od vydaní, kým budeme čakať na nové vylepšenia, ktoré uvarí naša skvelá komunita. Ako vždy, ak narazíte na chybu, nahláste ju na Github!
 

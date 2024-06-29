@@ -9,7 +9,7 @@
 4. Se corrigió un error que impedía cambiar la configuración de otra cuenta
 
 Fever es una API en desuso, que no es compatible con los reproductores modernos.
-Sin embargo, representa una buena oportunidad para comenzar, ya que es la primera API de servicios de terceros compatible con Read You.
+Sin embargo, representa una buena oportunidad para comenzar, ya que es la primera API de servicios de terceros compatible con Lectio.
 
 Pronto estará disponible una actualización adicional para corregir errores y agregar nuevas traducciones.
 

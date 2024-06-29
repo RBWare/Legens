@@ -9,7 +9,7 @@
 4. Naprawić błąd polegający na braku możliwości modyfikacji ustawień innych kont.
 
 Fever to przestarzały interfejs API, który nie jest w pełni kompatybilny z nowoczesnymi czytnikami.
-Jednak jako pierwszy interfejs API usług stron trzecich obsługiwany przez Read You, jest to dobra okazja, aby zacząć od niego.
+Jednak jako pierwszy interfejs API usług stron trzecich obsługiwany przez Lectio, jest to dobra okazja, aby zacząć od niego.
 
 W najbliższej przyszłości pojawi się dodatkowa aktualizacja dla poprawek błędów i dodatkowych tłumaczeń.
 

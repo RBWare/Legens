@@ -1,6 +1,7 @@
 package me.ash.reader.infrastructure.preference
 
 import android.content.Context
+import androidx.compose.runtime.compositionLocalOf
 import androidx.datastore.preferences.core.Preferences
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -8,6 +9,10 @@ import me.ash.reader.ui.ext.dataStore
 import me.ash.reader.ui.ext.put
 import me.ash.reader.ui.ext.DataStoreKey
 import me.ash.reader.ui.ext.DataStoreKey.Companion.filterDuplicates
+
+
+val LocalFilterDuplicates =
+    compositionLocalOf<FilterDuplicatesPreference> { FilterDuplicatesPreference.default }
 
 sealed class FilterDuplicatesPreference(val value: Boolean) : Preference() {
     object ON : FilterDuplicatesPreference(true)

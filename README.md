@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/en-US/images/icon.png">
+    <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="https://raw.githubusercontent.com/RBWare/Legens/main/fastlane/metadata/android/en-US/images/icon.png">
 </div>
 
 <br>
@@ -19,8 +19,8 @@
 - [ ] Stock / Crypto Tracking Support
 - [ ] Default Launcher Support
 
-**Lectio** is an Android RSS reader presented in [Material You](https://m3.material.io/) style. It s a fork of ReadYou.
+**Legens** is an Android RSS reader presented in [Material You](https://m3.material.io/) style. It s a fork of ReadYou.
 
 ## License
 
-GNU GPL v3.0 © [Lectio](https://github.com/RBWare/Lectio/blob/main/LICENSE)
+GNU GPL v3.0 © [Legens](https://github.com/RBWare/Legens/blob/main/LICENSE)

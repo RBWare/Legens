@@ -15,5 +15,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Lectio"
+rootProject.name = "Legens"
 include(":app")

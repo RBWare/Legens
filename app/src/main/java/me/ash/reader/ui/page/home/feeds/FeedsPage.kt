@@ -1,12 +1,12 @@
 package me.ash.reader.ui.page.home.feeds
 
+import android.content.Intent
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.height
@@ -19,7 +19,6 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
-import androidx.compose.material.icons.outlined.KeyboardArrowRight
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Refresh
@@ -42,6 +41,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat.startActivity
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.work.WorkInfo
@@ -76,8 +76,10 @@ import me.ash.reader.ui.page.home.feeds.drawer.group.GroupOptionDrawer
 import me.ash.reader.ui.page.home.feeds.subscribe.SubscribeDialog
 import me.ash.reader.ui.page.home.feeds.subscribe.SubscribeViewModel
 import me.ash.reader.ui.page.settings.accounts.AccountViewModel
+import me.ash.reader.unreddit.MainActivity
 import kotlin.collections.set
 import kotlin.math.ln
+
 
 @OptIn(
     androidx.compose.foundation.ExperimentalFoundationApi::class
@@ -173,9 +175,11 @@ fun FeedsPage(
                 tint = MaterialTheme.colorScheme.onSurface,
                 showBadge = newVersion.whetherNeedUpdate(currentVersion, skipVersion),
             ) {
-                navController.navigate(RouteName.SETTINGS) {
-                    launchSingleTop = true
-                }
+                val intent = Intent(context, MainActivity::class.java)
+                startActivity(context, intent, null)
+//                navController.navigate(RouteName.SETTINGS) {
+//                    launchSingleTop = true
+//                }
             }
         },
         actions = {

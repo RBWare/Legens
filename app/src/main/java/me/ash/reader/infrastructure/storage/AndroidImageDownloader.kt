@@ -43,7 +43,7 @@ class AndroidImageDownloader @Inject constructor(
                     )
 
                     val relativePath =
-                        Environment.DIRECTORY_PICTURES + "/" + context.getString(R.string.lectio)
+                        Environment.DIRECTORY_PICTURES + "/" + context.getString(R.string.legens)
 
                     val resolver = context.contentResolver
 

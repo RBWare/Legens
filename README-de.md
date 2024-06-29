@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/de-DE/images/icon.png">
+    <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="https://raw.githubusercontent.com/RBWare/Legens/main/fastlane/metadata/android/de-DE/images/icon.png">
 </div>
 
 <br>
@@ -7,11 +7,11 @@
 <br>
 
 <div align="center">
-    <img alt="GitHub" src="https://img.shields.io/github/license/RBWare/Lectio?color=c3e7ff&style=flat-square">
-    <a target="_blank" href="https://github.com/RBWare/Lectio/releases">
-        <img alt="Version" src="https://img.shields.io/github/v/release/RBWare/Lectio?color=c3e7ff&label=version&style=flat-square">
+    <img alt="GitHub" src="https://img.shields.io/github/license/RBWare/Legens?color=c3e7ff&style=flat-square">
+    <a target="_blank" href="https://github.com/RBWare/Legens/releases">
+        <img alt="Version" src="https://img.shields.io/github/v/release/RBWare/Legens?color=c3e7ff&label=version&style=flat-square">
     </a>
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/RBWare/Lectio?color=c3e7ff&style=flat-square">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/RBWare/Legens?color=c3e7ff&style=flat-square">
     <br>
     <a target="_blank" href="https://t.me/ReadYouApp">
         <img alt="Telegram" src="https://img.shields.io/badge/Telegram-ReadYouApp-c3e7ff?logo=telegram&style=flat-square">
@@ -22,27 +22,27 @@
 </div>
 
 <div align="center">
-    <h1>Lectio</h1>
+    <h1>Legens</h1>
     <p>Ein Android RSS-Reader, präsentiert im <a target="_blank" href="https://m3.material.io/">Material You</a> Designstil.</p>
-    <p><a target="_blank" href="https://github.com/RBWare/Lectio/blob/main/README.md">English</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <p><a target="_blank" href="https://github.com/RBWare/Legens/blob/main/README.md">English</a>&nbsp;&nbsp;|&nbsp;&nbsp;
     Deutsch&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a target="_blank" href="https://github.com/RBWare/Lectio/blob/main/README-zh-CN.md">简体中文</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a target="_blank" href="https://github.com/RBWare/Lectio/blob/main/README-zh-TW.md">繁體中文</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a target="_blank" href="https://github.com/RBWare/Lectio/blob/main/README-fa.md">فارسی</a></p>
+    <a target="_blank" href="https://github.com/RBWare/Legens/blob/main/README-zh-CN.md">简体中文</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a target="_blank" href="https://github.com/RBWare/Legens/blob/main/README-zh-TW.md">繁體中文</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a target="_blank" href="https://github.com/RBWare/Legens/blob/main/README-fa.md">فارسی</a></p>
     <br/>
     <br/>
-    <img src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/de-DE/images/phoneScreenshots/startup.png" width="19.2%" alt="startup" />
-    <img src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/de-DE/images/phoneScreenshots/feeds.png" width="19.2%" alt="feeds" />
-    <img src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/de-DE/images/phoneScreenshots/flow.png" width="19.2%" alt="flow" />
-    <img src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/de-DE/images/phoneScreenshots/read.png" width="19.2%" alt="read" />
-    <img src="https://raw.githubusercontent.com/RBWare/Lectio/main/fastlane/metadata/android/de-DE/images/phoneScreenshots/settings.png" width="19.2%" alt="settings" />
+    <img src="https://raw.githubusercontent.com/RBWare/Legens/main/fastlane/metadata/android/de-DE/images/phoneScreenshots/startup.png" width="19.2%" alt="startup" />
+    <img src="https://raw.githubusercontent.com/RBWare/Legens/main/fastlane/metadata/android/de-DE/images/phoneScreenshots/feeds.png" width="19.2%" alt="feeds" />
+    <img src="https://raw.githubusercontent.com/RBWare/Legens/main/fastlane/metadata/android/de-DE/images/phoneScreenshots/flow.png" width="19.2%" alt="flow" />
+    <img src="https://raw.githubusercontent.com/RBWare/Legens/main/fastlane/metadata/android/de-DE/images/phoneScreenshots/read.png" width="19.2%" alt="read" />
+    <img src="https://raw.githubusercontent.com/RBWare/Legens/main/fastlane/metadata/android/de-DE/images/phoneScreenshots/settings.png" width="19.2%" alt="settings" />
     <br/>
     <br/>
 </div>
 
 ## Funktionen
 
-**Lectio** ist ein Android RSS-Reader, präsentiert im [Material You](https://m3.material.io/) Designstil.
+**Legens** ist ein Android RSS-Reader, präsentiert im [Material You](https://m3.material.io/) Designstil.
 
 Nachfolgend sind die bisher erzielten Fortschritte und die Ziele aufgeführt, an denen in naher Zukunft gearbeitet werden soll:
 
@@ -59,7 +59,7 @@ Nachfolgend sind die bisher erzielten Fortschritte und die Ziele aufgeführt, an
 
 ## Integration
 
-**Lectio** ist mit einigen APIs von Drittanbietern kompatibel, um bei der Nutzung Ihrer bestehenden Cloud-Konten als Datenquellen zu unterstützen.
+**Legens** ist mit einigen APIs von Drittanbietern kompatibel, um bei der Nutzung Ihrer bestehenden Cloud-Konten als Datenquellen zu unterstützen.
 
 - [x] Fever
 - [x] Google Reader
@@ -73,7 +73,7 @@ Nachfolgend sind die bisher erzielten Fortschritte und die Ziele aufgeführt, an
 
 ## Herunterladen
 
-[<img src="https://s1.ax1x.com/2023/01/12/pSu1a36.png" alt="Hole es auf GitHub" height="80">](https://github.com/RBWare/Lectio/releases)
+[<img src="https://s1.ax1x.com/2023/01/12/pSu1a36.png" alt="Hole es auf GitHub" height="80">](https://github.com/RBWare/Legens/releases)
 [<img src="https://s1.ax1x.com/2023/01/12/pSnTZ0f.png"
      alt="Hole es im Telegram Channel"
      height="80">](https://t.me/ReadYouApp)
@@ -89,7 +89,7 @@ Wir bieten Nightly-Versionen zu Testzwecken an. Diese Versionen enthalten die ne
 
 Sie können die Nightly-Version über den folgenden Link herunterladen:
 
-<a target="_blank" href="https://github.com/RBWare/Lectio/actions/workflows/build_commit.yaml">Nightly-Builds überprüfen</a>
+<a target="_blank" href="https://github.com/RBWare/Legens/actions/workflows/build_commit.yaml">Nightly-Builds überprüfen</a>
 
 Wählen Sie den neuesten Workflow auf der GitHub Actions-Seite aus und laden Sie die Artefakte von der Zusammenfassungsseite des Workflows herunter (Es ist möglicherweise erforderlich, sich bei GitHub anzumelden).
 
@@ -97,7 +97,7 @@ Wählen Sie den neuesten Workflow auf der GitHub Actions-Seite aus und laden Sie
 
 ## Spenden
 
-**Lectio** ist eine kostenlose Open-Source-Software, die von der Open-Source-Gemeinschaft profitiert, und jeder Benutzer kann ihre volle Funktionalität kostenlos genießen. Wenn Sie also meine aktuelle Arbeit wertschätzen, können Sie mir gerne eine Tasse Kaffee spendieren ☕️.
+**Legens** ist eine kostenlose Open-Source-Software, die von der Open-Source-Gemeinschaft profitiert, und jeder Benutzer kann ihre volle Funktionalität kostenlos genießen. Wenn Sie also meine aktuelle Arbeit wertschätzen, können Sie mir gerne eine Tasse Kaffee spendieren ☕️.
 
 [<img src="https://s1.ax1x.com/2023/01/12/pSnHqpQ.png" alt="donate" height="80">](https://afdian.net/a/ashinch)
 
@@ -105,20 +105,20 @@ Danke für all die Liebe und Unterstützung ❤️
 
 ## Übersetzen
 
-Vielen Dank an alle **Lectio** Übersetzer, und wenn Sie einen Beitrag leisten möchten, reichen Sie bitte eine Übersetzung über [Weblate](https://hosted.weblate.org/engage/readyou/) ein.
+Vielen Dank an alle **Legens** Übersetzer, und wenn Sie einen Beitrag leisten möchten, reichen Sie bitte eine Übersetzung über [Weblate](https://hosted.weblate.org/engage/readyou/) ein.
 
 [<img src="https://hosted.weblate.org/widgets/readyou/-/horizontal-auto.svg" alt="Übersetzungsstatus" />](https://hosted.weblate.org/engage/readyou/)
 
 ## Build
 
-> Gerne können Sie einen [Pull Request](https://github.com/RBWare/Lectio/pulls) öffnen. [GitHub Actions](https://github.com/RBWare/Lectio/actions) verpackt automatisch alle Varianten an APK Dateien für jeden Commit.
+> Gerne können Sie einen [Pull Request](https://github.com/RBWare/Legens/pulls) öffnen. [GitHub Actions](https://github.com/RBWare/Legens/actions) verpackt automatisch alle Varianten an APK Dateien für jeden Commit.
 
-**Lectio** ist auf der Android nativen [Jetpack Compose](https://developer.android.com/jetpack/compose) Architektur implementiert.
+**Legens** ist auf der Android nativen [Jetpack Compose](https://developer.android.com/jetpack/compose) Architektur implementiert.
 
-1. Zuerst müssen Sie sich den Quellcode von **Lectio** herunterladen.
+1. Zuerst müssen Sie sich den Quellcode von **Legens** herunterladen.
 
     ```shell
-    git clone https://github.com/RBWare/Lectio.git
+    git clone https://github.com/RBWare/Legens.git
     ```
 
 2. Öffnen Sie es dann mit [Android Studio (neueste Version)] (https://developer.android.com/studio).
@@ -146,16 +146,16 @@ Vielen Dank an alle **Lectio** Übersetzer, und wenn Sie einen Beitrag leisten m
 
 [<img src="https://avatars.githubusercontent.com/u/76829190?v=4" width="180" height="180" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;"/>](https://github.com/Kyant0)
 
-Vielen Dank an **@Kyant0** für die Design-Inspiration und die Implementierung der Monet-Engine für **Lectio**.
+Vielen Dank an **@Kyant0** für die Design-Inspiration und die Implementierung der Monet-Engine für **Legens**.
 
 [<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" width="200" alt="Copyright © 2000-2023 JetBrains s.r.o. JetBrains and the JetBrains logo are registered trademarks of JetBrains s.r.o."/>](https://www.jetbrains.com/)
 
-Vielen Dank an **JetBrains** für die Bereitstellung von kostenlosen Open-Source-Lizenzen für IDEs für **Lectio**.
+Vielen Dank an **JetBrains** für die Bereitstellung von kostenlosen Open-Source-Lizenzen für IDEs für **Legens**.
 
 [<img src="https://hosted.weblate.org/widgets/readyou/-/287x66-white.png"  width="200"/>](https://hosted.weblate.org/engage/readyou/)
 
-Vielen Dank an **Weblate** für das kostenlose Hosting von Open-Source-Projekten für **Lectio**.
+Vielen Dank an **Weblate** für das kostenlose Hosting von Open-Source-Projekten für **Legens**.
 
 ## Lizenz
 
-GNU GPL v3.0 © [Lectio](https://github.com/RBWare/Lectio/blob/main/LICENSE)
+GNU GPL v3.0 © [Legens](https://github.com/RBWare/Legens/blob/main/LICENSE)

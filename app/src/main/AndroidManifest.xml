@@ -20,11 +20,18 @@
         android:name=".infrastructure.android.AndroidApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/lectio"
+        android:label="@string/legens"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Reader"
         android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".unreddit.MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+            <nav-graph android:value="@navigation/navigation_graph"/>
+        </activity>
         <activity
             android:name=".infrastructure.android.MainActivity"
             android:exported="true"

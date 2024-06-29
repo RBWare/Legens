@@ -8,6 +8,12 @@ plugins {
     alias(libs.plugins.aboutlibraries)
     alias(libs.plugins.room)
     alias(libs.plugins.hilt)
+
+    // TODO - Update
+    kotlin("kapt")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 fun fetchGitCommitHash(): String {
@@ -29,13 +35,13 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.rbware.lectio"
+        applicationId = "com.rbware.legens"
         minSdk = 26
         targetSdk = 33
         versionCode = 25
         versionName = "0.10.1"
 
-        buildConfigField("String", "USER_AGENT_STRING", "\"Lectio/${'$'}{versionName}(${versionCode})\"")
+        buildConfigField("String", "USER_AGENT_STRING", "\"Legens/${'$'}{versionName}(${versionCode})\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -81,9 +87,13 @@ android {
             signingConfig = signingConfigs.getByName("release")
         }
     }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
     applicationVariants.all {
         outputs.all {
-            (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName = "Lectio-${defaultConfig.versionName}-${gitCommitHash}.apk"
+            (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName = "Legens-${defaultConfig.versionName}-${gitCommitHash}.apk"
         }
     }
     kotlinOptions {
@@ -118,6 +128,7 @@ dependencies {
     // Compose
     implementation(libs.compose.html)
     implementation(platform(libs.compose.bom))
+    implementation(libs.navigation.ui.ktx)
     androidTestImplementation(platform(libs.compose.bom))
     implementation(libs.compose.animation.graphics)
     implementation(libs.compose.ui)
@@ -172,6 +183,26 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.activity.compose)
     implementation(libs.appcompat)
+
+    // TODO - update
+    implementation("androidx.preference:preference-ktx:1.2.0")
+    implementation("com.google.android.exoplayer:exoplayer:2.18.1")
+    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+    implementation("androidx.fragment:fragment-ktx:1.5.4")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+//    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation("com.squareup.moshi:moshi:1.14.0")
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
+    implementation("com.squareup.moshi:moshi-adapters:1.14.0")
+    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
+    implementation("com.google.android.material:material:1.7.0")
+    implementation("com.github.MikeOrtiz:TouchImageView:3.0.3")
+    implementation("com.drakeet.drawer:drawer:1.0.3")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+
 
     // Testing
     testImplementation(libs.junit)

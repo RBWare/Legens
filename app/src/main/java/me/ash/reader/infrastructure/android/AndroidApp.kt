@@ -107,11 +107,11 @@ class AndroidApp : Application(), Configuration.Provider {
     override fun onCreate() {
         super.onCreate()
         CrashHandler(this)
-        applicationScope.launch {
-            accountInit()
-            workerInit()
-            checkUpdate()
-        }
+//        applicationScope.launch {
+//            accountInit()
+//            workerInit()
+//            checkUpdate()
+//        }
     }
 
     /**

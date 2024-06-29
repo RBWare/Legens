@@ -174,7 +174,7 @@ fun TipsAndSupportPage(
                             Image(
                                 modifier = Modifier.size(90.dp),
                                 painter = painterResource(R.drawable.ic_launcher_pure),
-                                contentDescription = stringResource(R.string.lectio),
+                                contentDescription = stringResource(R.string.legens),
                                 colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface alwaysLight true),
                             )
                         }
@@ -191,7 +191,7 @@ fun TipsAndSupportPage(
                             }
                         ) {
                             Text(
-                                text = stringResource(R.string.lectio),
+                                text = stringResource(R.string.legens),
                                 style = MaterialTheme.typography.displaySmall
                             )
                         }

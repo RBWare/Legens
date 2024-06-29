@@ -19,9 +19,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.outlined.DeleteSweep
 import androidx.compose.material.icons.outlined.PersonOff
-import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -44,7 +44,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.google.accompanist.navigation.animation.rememberAnimatedNavController
+import androidx.navigation.compose.rememberNavController
 import me.ash.reader.R
 import me.ash.reader.infrastructure.preference.KeepArchivedPreference
 import me.ash.reader.infrastructure.preference.SyncBlockListPreference
@@ -61,6 +61,7 @@ import me.ash.reader.ui.component.base.Subtitle
 import me.ash.reader.ui.component.base.TextFieldDialog
 import me.ash.reader.ui.component.base.Tips
 import me.ash.reader.ui.ext.DateFormat
+import me.ash.reader.ui.ext.MimeType
 import me.ash.reader.ui.ext.collectAsStateValue
 import me.ash.reader.ui.ext.getCurrentVersion
 import me.ash.reader.ui.ext.showToast
@@ -75,7 +76,7 @@ import java.util.Date
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AccountDetailsPage(
-    navController: NavHostController = rememberAnimatedNavController(),
+    navController: NavHostController = rememberNavController(),
     viewModel: AccountViewModel = hiltViewModel(),
 ) {
     val uiState = viewModel.accountUiState.collectAsStateValue()
@@ -103,7 +104,7 @@ fun AccountDetailsPage(
     }
 
     val launcher = rememberLauncherForActivityResult(
-        ActivityResultContracts.CreateDocument("*/*")
+        ActivityResultContracts.CreateDocument(MimeType.ANY)
     ) { result ->
         viewModel.exportAsOPML(selectedAccount!!.id!!) { string ->
             result?.let { uri ->
@@ -223,7 +224,7 @@ fun AccountDetailsPage(
                     //     title = stringResource(R.string.block_list),
                     //     onClick = { blockListDialogVisible = true },
                     // ) {}
-                    Tips(text = stringResource(R.string.synchronous_tips))
+                    Tips(text = stringResource(R.string.synchronous_tips) + "\n\n" + stringResource(R.string.keep_archived_tips))
                     Spacer(modifier = Modifier.height(24.dp))
                 }
                 item {
@@ -483,7 +484,7 @@ fun AccountDetailsPage(
             TextButton(
                 onClick = {
                     exportOPMLModeDialogVisible = false
-                    launcherOPMLFile(context, launcher)
+                    subscriptionOPMLFileLauncher(context, launcher)
                 }
             ) {
                 Text(stringResource(R.string.export))
@@ -502,11 +503,11 @@ fun AccountDetailsPage(
     )
 }
 
-private fun launcherOPMLFile(
+private fun subscriptionOPMLFileLauncher(
     context: Context,
     launcher: ManagedActivityResultLauncher<String, Uri?>,
 ) {
     launcher.launch("Read-You-" +
-            "${context.getCurrentVersion()}-export-" +
+            "${context.getCurrentVersion()}-subscription-" +
             "${Date().toString(DateFormat.YYYY_MM_DD_DASH_HH_MM_SS_DASH)}.opml")
 }

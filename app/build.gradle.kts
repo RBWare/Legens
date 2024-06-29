@@ -29,13 +29,13 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "me.ash.reader"
+        applicationId = "com.rbware.lectio"
         minSdk = 26
         targetSdk = 33
         versionCode = 25
         versionName = "0.10.1"
 
-        buildConfigField("String", "USER_AGENT_STRING", "\"ReadYou/${'$'}{versionName}(${versionCode})\"")
+        buildConfigField("String", "USER_AGENT_STRING", "\"Lectio/${'$'}{versionName}(${versionCode})\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -83,7 +83,7 @@ android {
     }
     applicationVariants.all {
         outputs.all {
-            (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName = "ReadYou-${defaultConfig.versionName}-${gitCommitHash}.apk"
+            (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName = "Lectio-${defaultConfig.versionName}-${gitCommitHash}.apk"
         }
     }
     kotlinOptions {

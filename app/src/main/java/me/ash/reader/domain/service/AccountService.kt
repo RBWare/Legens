@@ -61,7 +61,7 @@ class AccountService @Inject constructor(
     suspend fun addDefaultAccount(): Account =
         addAccount(Account(
             type = AccountType.Local,
-            name = context.getString(R.string.read_you),
+            name = context.getString(R.string.lectio),
         ))
 
     suspend fun update(accountId: Int, block: Account.() -> Unit) {

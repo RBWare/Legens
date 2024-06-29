@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="read_you" translatable="false">Read You</string>
+    <string name="lectio" translatable="false">Lectio</string>
     <string name="all">All</string>
     <plurals name="all_desc">
         <item quantity="one">%1$d Archived Item</item>

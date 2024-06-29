@@ -15,5 +15,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Reader"
+rootProject.name = "Lectio"
 include(":app")

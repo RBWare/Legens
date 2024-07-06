@@ -17,7 +17,7 @@
 - [ ] Mastodon / Lemmy / Federation Support
 - [ ] Piped Support (not traditional YouTube)
 - [ ] Stock / Crypto Tracking Support
-- [ ] Default Launcher Support
+- [X] Default Launcher Support
 
 **Legens** is an Android RSS reader presented in [Material You](https://m3.material.io/) style. It s a fork of ReadYou.
 

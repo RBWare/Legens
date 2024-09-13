@@ -29,7 +29,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "me.ash.reader"
+        applicationId = "io.rbware.legens"
         minSdk = 26
         targetSdk = 33
         versionCode = 25

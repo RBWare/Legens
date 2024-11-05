@@ -2,7 +2,7 @@ import java.util.Properties
 import java.io.FileInputStream
 
 plugins {
-alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.android.application)
     alias(libs.plugins.ksp)
     alias(libs.plugins.aboutlibraries)
@@ -29,7 +29,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "me.ash.reader"
+        applicationId = "io.rbware.legens"
         minSdk = 26
         targetSdk = 33
         versionCode = 25
@@ -78,6 +78,9 @@ android {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release")
+        }
+        all {
             signingConfig = signingConfigs.getByName("release")
         }
     }
@@ -130,8 +133,6 @@ dependencies {
     implementation(libs.compose.material3)
 
     // Accompanist
-    implementation(libs.accompanist.pager)
-    implementation(libs.accompanist.flowlayout)
     implementation(libs.accompanist.swiperefresh)
 
     // Coil
@@ -153,6 +154,7 @@ dependencies {
     implementation(libs.readability4j)
     implementation(libs.rome)
     implementation(libs.telephoto)
+    implementation(libs.swipe)
     implementation(libs.okhttp)
     implementation(libs.okhttp.coroutines)
     implementation(libs.retrofit)
